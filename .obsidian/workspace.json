@@ -11,8 +11,30 @@
             "id": "00736f6904649550",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Automated Reasoning/Logic Programming/1. Logic Programming.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "fc9385bfb91df7ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "330c36975402dad7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Automated Reasoning/Logic Programming/1. Logic Programming.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Automated Reasoning/Logic Programming/1. Logic Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Automated Reasoning/Logic Programming/1. Logic Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +142,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Automated Reasoning/Logic Programming/1. Logic Programming.md"
+              }
             }
           }
         ]
