@@ -1,7 +1,7 @@
 1. Definizione formale CSP, COP e soluzione.
 	- Come si può usare CSP per risolvere COP
 	- Decidere se un CSP su domini finiti è consistente è NP-Hard?
-	- Che scelte non deterministiche vengono fatte durante la contraint based search per CSP?
+	- Che scelte non deterministiche vengono fatte durante la constraint based search per CSP?
 	- Soluzione in $P$ dati predicati di vincoli di confronto e domini espliciti?
 	- Definire SAT, riduzione a CSP con domini $\{0,1\}$.
 1. Definizione constraint propagation e sua complessità.

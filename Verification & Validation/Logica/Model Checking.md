@@ -43,7 +43,7 @@ $Satisfiability(\varphi)$ è un problema in $EXP$ (deterministico), $NP$ (non-de
 
 $CNF-SAT$ è comunque $NP-completo$.
 
-### Tableaux
+### Tableau
 
 Si cerca di determinare la soddisfacibilità di una formula "indovinando" pezzi della formula.
 Data una formula NNF si parte dalla formula $\varphi$ e si seleziona per un congiunto una variabile, mantenendo le altre. Si continua ricorsivamente finché non viene trovata una foglia **non bloccata** (non contiene un letterale e la sua negazione) con solo letterali.

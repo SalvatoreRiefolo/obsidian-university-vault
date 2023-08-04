@@ -27,16 +27,16 @@ Applichiamo quindi in sequenza la funzione $\delta$ ad ogni simbolo di $w$.
 
 Una parola $w \in A^*$ è **accettata** da $\mathcal{A}$ sse $\hat{\delta}(q_{0}, w) \in F$, cioè se uno stato finale più essere raggiunto da quello iniziale.
 
-Il linguaggio accettato da $\mathcal{A}$ è l'insieme di parole accettate da $\mathcal{A}$. Questi linguaggio vengono chiamati **regolari**
+Il linguaggio accettato da $\mathcal{A}$ è l'insieme di parole accettate da $\mathcal{A}$, $L(\mathcal{A})$. Questi linguaggi vengono chiamati **regolari**.
 
 ## Automi a stati finiti non deterministici (NFA)
 
 Un NFA $\mathcal{A}$ è una tupla $(Q,A,\delta, q_{0}, F)$ dove:
 - $Q,A,Q_{0},F$ sono gli stessi di un DFA.
-- $delta : Q \times A \rightarrow 2^{Q}$. Leggendo un simbolo da uno stato si possono raggiungere più stati.
-- 
+- $delta : Q \times A \rightarrow 2^{Q}$. Leggendo un simbolo da uno stato si possono raggiungere più stati. $2^Q$ è il powerset di $Q$, ossia l'insieme di tutti gli insiemi di $Q$.
+
 Possiamo generalizzare $\delta$ da simboli a parole:
-- $\hat{\delta}(q, \varepsilon) = \{q\}$. Leggendo la parola vuota si rimane sullo stesso stato.
+- $\hat{\delta}(q, \varepsilon) = \{q\}$. Leggendo la parola vuota si rimane sullo stesso stato. 
 - $\hat{\delta}(q, wa) = \bigcup\limits_{p \in \hat{\delta}(q,w)}\delta(p, a)$ con $w$ parola, $a$ ultimo simbolo di $w$. Il risultato è l'insieme di stati raggiungibili leggendo il simbolo $a$ dall'insieme di stati raggiunti dopo aver letto la parola $w$.
 
 Una parola $w \in A^*$ è **accettata** da $\mathcal{A}$ sse $\hat{\delta}(q_{0}, w) \cap F \neq \varnothing$, cioè se **almeno una** computazione raggiunge lo stato finale.
@@ -52,3 +52,18 @@ Gli NFA sono almeno tanto espressivi quando i DFA, e tutti i linguaggio definibi
 #todo
 
 ## NFA con $\varepsilon$-mosse
+Un NFA con $\varepsilon$-mosse $\mathcal{A}$ è una tupla $(Q,A,\delta, q_{0}, F)$ dove:
+- $Q,A,Q_{0},F$ sono gli stessi di un NFA.
+- $\delta : Q \times A \cup \{\varepsilon\} \rightarrow 2^{Q}$. Una **$\varepsilon$-mossa** permette di eseguire una mossa senza consumare un simbolo. L'insieme di stati che può essere raggiunto da un certo stato $q \in Q$ è chiamato **$\varepsilon$-chiusura** (closure).
+
+Per $P \subseteq Q$ definiamo $\varepsilon$-closure$(P) = \bigcup\limits_{p \in P} \varepsilon$-closure$(p)$.
+
+Possiamo generalizzare $\delta$ da simboli a parole:
+- $\hat{\delta}(q, \varepsilon) = \varepsilon$-closure$(q)$. Si avanza fino alla closure di $q$.
+- $\hat{\delta}(q, wa) = \varepsilon$-closure$(\bigcup\limits_{p \in \hat{\delta}(q,w)}\delta(p, a))$ con $w$ parola, $a$ ultimo simbolo di $w$. Il risultato è l'insieme di stati raggiungibili leggendo il simbolo $a$ dall'insieme di stati raggiunti dopo aver letto la parola $w$.
+
+>[!Teorema]
+>Per tutti gli NFA con $\varepsilon$-mosse $\mathcal{A}$ esiste un NFA $\mathcal{A'}$ tale che $L(\mathcal{A}) = L(\mathcal{A'})$ e vice versa.
+>
+>Segue che NFA $\equiv$ DFA $\equiv$ NFA con $\varepsilon$-mosse.
+
