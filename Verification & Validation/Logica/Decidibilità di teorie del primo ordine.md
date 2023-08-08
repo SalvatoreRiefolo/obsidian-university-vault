@@ -1,0 +1,1 @@
+#todo pagine 39-42

@@ -13,7 +13,7 @@ Ogni insieme di parole su $A$ è un sottoinsieme di $A^*$ ed è chiamato **lingu
 
 ## Automi a stati finiti deterministici (DFA)
 
-Un DFA $\mathcal{A}$ è una tupla $(Q,A,\delta, q_{0}, F)$ dove:
+Un DFA $\mathcal{A}$ è una quintupla $(Q,A,\delta, q_{0}, F)$ dove:
 - $Q$ è un insieme finito di stati.
 - $A$ è un alfabeto finito.
 - $\delta: Q \times A \rightarrow Q$  è una funzione di transizione che dato uno stato ed un simbolo di $A$ restituisce un nuovo stato. La funzione è deterministica e potrebbe essere *parziale* (non definita per certi stati).
@@ -31,7 +31,7 @@ Il linguaggio accettato da $\mathcal{A}$ è l'insieme di parole accettate da $\m
 
 ## Automi a stati finiti non deterministici (NFA)
 
-Un NFA $\mathcal{A}$ è una tupla $(Q,A,\delta, q_{0}, F)$ dove:
+Un NFA $\mathcal{A}$ è una quintupla $(Q,A,\delta, q_{0}, F)$ dove:
 - $Q,A,Q_{0},F$ sono gli stessi di un DFA.
 - $delta : Q \times A \rightarrow 2^{Q}$. Leggendo un simbolo da uno stato si possono raggiungere più stati. $2^Q$ è il powerset di $Q$, ossia l'insieme di tutti gli insiemi di $Q$.
 

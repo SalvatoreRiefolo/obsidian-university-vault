@@ -11,7 +11,7 @@ La comunicazione tra le componenti può avvenire tramite **passaggio di messaggi
 Facendo eseguire due processi allo stesso tempo otteniamo **true concurrency**. Se invece si eseguono azioni atomiche dei due processi alternatamente, si parla di **interleaving**.
 
 ### Modelli 
-I modelli considerati per i sistemi reattivi sono i **fair transition system** e gli **automi**, ed il linguaggio usato è la **logica temporale**, che garantiscono:
+I modelli considerati per i sistemi reattivi sono i **[[Fair Transition System|fair transition system]]** e gli **[[Automi su parole infinite|automi]]**, ed il linguaggio usato è la **logica temporale**, che garantiscono:
 - **Safety**: i casi negativi non occorrono **mai** ($\forall$)
 - **Liveness**: i casi positivi occorrono prima o poi ($\exists$)
 
