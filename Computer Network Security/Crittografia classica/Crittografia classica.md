@@ -1,5 +1,5 @@
 
-Due tipi di crittazione:
+Due tipi di cifratura:
 - **Simmetrica**: entrambe le parti condividono un segreto (**chiave**) con cui poter cifrare il messaggio e leggere il messaggio cifrato. Le due azioni sono invertibili solo se viene usata la stessa chiave.
 - **Asimmetrica**: le due parti possiedono due chiavi, una **pubblica** ed una **privata**, e le azioni effettuate con una chiave possono essere invertite solo usando l'altra chiave.
 

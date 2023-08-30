@@ -39,5 +39,5 @@ Definisce delle linee guida per l'autenticazione ai servizi attraverso certifica
 
 Lo schema opera come segue:
 1. Si effettua l'hash del **certificato non firmato**, tra cui l'identificativo dell'utente da certificare, la sua chiave pubblica ed altre informazioni su autorità ed il certificato.
-2. Si cifra l'hash con la chiave privata dell'autorità per generare la firma. La firma concatenata al certificato non firmato, ottenendo il **certificato firmato**.
+2. Si cifra l'hash con la chiave privata dell'autorità per generare la firma. Si concatena la firma al certificato non firmato, ottenendo il **certificato firmato**.
 3. La verifica del certificato si effettua facendo l'hash del certificato senza firma e dandola in input all'algoritmo di verifica insieme a firma e chiave pubblica dell'autorità.
