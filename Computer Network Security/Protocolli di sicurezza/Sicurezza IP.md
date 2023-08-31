@@ -1,10 +1,10 @@
 Garantisce protezione per applicazioni che possiedono o non possiedono meccanismi di sicurezza, agendo a livello di networking.
 
 La specifica di IPSec definisce:
-- Architettura, che copre i concetti generali, le definizioni e i requisiti di sicurezza.
-- Authentication Header, protocollo che specifica header di estensione per l'autenticazione e l'integrità dell'intero pacchetto, usando funzioni di hash con chiave.
-- Encapsulating Security Payload, protocollo per cifratura ed integrità del payload.
-- Internet Key Exchange, insieme di protocolli che descrivono la gestione delle chiavi da usare per IPSec.
+- **Architettura**, che copre i concetti generali, le definizioni e i requisiti di sicurezza.
+- **Authentication Header**, protocollo che specifica header di estensione per l'autenticazione e l'integrità dell'intero pacchetto, usando funzioni di hash con chiave.
+- **Encapsulating Security Payload**, protocollo per cifratura ed integrità del payload.
+- **Internet Key Exchange**, insieme di protocolli che descrivono la gestione delle chiavi da usare per IPSec.
 
 ### Applicazioni di IPSec
 - Rete virtuale privata (VPN) sicura su Internet o una WAN pubblica.
@@ -27,7 +27,7 @@ Ogni entry definisce un sottoinsieme di indirizzi IP che puntano ad una SA per i
 ## Servizi
 
 ### Encapsulating Security Payload
-Provvede in insieme di header contenenti valori per la cifratura quali padding, lunghezza pad, numeri di sequenza, ecc.
+Provvede un insieme di header contenenti valori per la cifratura quali padding, lunghezza pad, numeri di sequenza, ecc.
 
 Usato per cifrare il payload, il padding, la lunghezza del padding ed il campo Next Header, che specifica il tipo di contenuto. Se l'algoritmo necessità di IV, questi vengono esplicitati prima del payload.
 
