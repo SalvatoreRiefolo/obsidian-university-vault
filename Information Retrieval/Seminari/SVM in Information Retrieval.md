@@ -1,7 +1,9 @@
-Idea: usare termini come feature per dividere i dati in uno spazio t-dimensionale (t = dimensione vocabolario).
+Idea: usare termini come feature per dividere i dati in uno spazio vettoriale t-dimensionale (t = dimensione vocabolario).
 
-Nell'equazione del piano (o retta) che divide i dati $t_1, t_2, \dots$ sono i termini.
-SVM trova due vettori di supporto per creare spazio in cui i punti non toccano il decision boundary.
+Ragionando in due dimensioni, i dati si possono separare usando un iperpiano come decision boundary.
+
+Nell'equazione del piano (o retta)  $t_1, t_2, \dots$ sono i termini.
+SVM trova due vettori di supporto paralleli all'iperpiano (retta) per creare spazio in cui i punti non toccano il decision boundary.
 
 La norma del vettore vettore W (perpendicolare tra i due supporti) è la distanza tra i due vettori di supporto.
 
@@ -9,8 +11,8 @@ L'obbiettivo delle SVM è massimizzare la distanza W rispetto al criterio di cla
 
 De tecniche: soft margin & kernel trick.
 
-- Soft margin: penalità per ogni punto che la funzione non classifica correttamente, scalati tramite termine C.
-- Kernel trick: si mappano punti in spazi con dimensionalità più alta e si vuole calcolare la similarità tra i punti: la matrice delle features però aumenta molto. Con il kernel trick si usano solo le features di partenza. Funzione di Kernel più intuitiva è la Gaussiana. Es: n documenti usati come punti di training per SVM (landmarks), si calcola la similarità tra punti e landmarks.
+- **Soft margin & slack variables**: La funzione di costo per massimizzare la distanza contiene una penalità se un punto viene classificato male (è tra i due vettori di supporto). La penalità è scalata tramite termine C.
+- **Kernel trick**: si mappano punti in spazi con dimensionalità più alta e si vuole calcolare la similarità tra i punti: la matrice delle features però aumenta molto. Con il kernel trick si usano solo le features di partenza. Funzione di Kernel più intuitiva è la Gaussiana: si usano gli $n$ documenti usati come punti di training per SVM (landmarks) e si calcola la similarità tra punti e landmarks.
 
 ## SVM in IR
 
