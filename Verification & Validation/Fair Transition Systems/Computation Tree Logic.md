@@ -10,7 +10,7 @@ Un CTL è rappresentabile tramite un albero, potenzialmente infinito se il grafo
 ### Quantificatori
 
 $X,U$ (next, until), sono chiamati **quantificatori di stato**.
-$A,E$ (alcuni, tutti), sono chiamati **quantificatori di computazione** o percorso (**path**).
+$A,E$ (tutti, tutti), sono chiamati **quantificatori di computazione** o percorso (**path**).
 In una formula CTL i quantificatori di stato e di computazione sono alternati.
 
 Una formula CTL è un insieme di formule di stato. Il futuro si ramifica, ma il passato (solitamente) è lineare.
@@ -40,7 +40,7 @@ I casi booleani costano $O(n)$, i casi temporali costano $O(n+m)$ (si propaga ai
 
 ## Problema dell'esplosione degli stati
 
-Durante il model checking potrebbe incorrere nel problema dell'**esplosione degli stati**: questo avviene quando si hanno molte componenti concorrenti.
+Durante il model checking si potrebbe incorrere nel problema dell'**esplosione degli stati**: questo avviene quando si hanno molte componenti concorrenti.
 La composizione di due componenti concorrenti è modellata attraverso il prodotto cartesiano dei rispettivi insiemi di stati. Una possibile soluzione è calcolare su insiemi di stati invece che su stati singoli, effettuando **model checking simbolico** usando OBDD.
 
 ### Model checking simbolico

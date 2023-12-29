@@ -31,7 +31,7 @@ Analogamente alle transizioni di un database, le istruzioni composte raggruppate
 **Skip**, **assign**, **await**, **send** e **receive** sono istruzioni composte di base. 
 Istruzioni costruite con istruzioni composte sono a loro volta istruzioni composte.
 
-Data $S$ istruzione composta, $\langle S \rangle$ è un'istruzione composta raggruppata se date due istruzioni ed un'istruzione di comunicazione sincrona $C$ $\langle S_{1}; C; S_{2}$, $S_{1},S_{2}$ non contengono istruzioni di comunicazione sincrona: un'istruzione raggruppata può quindi includere al massimo un'istruzione **send/receive**.
+Data $S$ istruzione composta, $\langle S \rangle$ è un'istruzione composta raggruppata se date due istruzioni ed un'istruzione di comunicazione sincrona $C$ $\langle S_{1}; C; S_{2} \rangle$, $S_{1},S_{2}$ non contengono istruzioni di comunicazione sincrona: un'istruzione raggruppata può quindi includere al massimo un'istruzione **send/receive**.
 Inoltre, un'istruzione raggruppata non può includere due o più istruzioni di comunicazione asincrona sullo stesso canale.
 
 ### Da SPL a FTS

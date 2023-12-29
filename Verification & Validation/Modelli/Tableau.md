@@ -1,5 +1,5 @@
 
-Un **tableau** $T_\varphi$ è un grafo diretto dove i nodi sono $\varphi$-atomi, es esiste un arco tra gli atomi $A,B$ se per ogni $Xp \in \Phi_\varphi$, $Xp \in A$ se e solo se $p \in B$. 
+Un **tableau** $T_\varphi$ è un grafo diretto dove i nodi sono $\varphi$-atomi, ed esiste un arco tra gli atomi $A,B$ se per ogni $Xp \in \Phi_\varphi$, $Xp \in A$ se e solo se $p \in B$. 
 Se un atomo presenta un connettivo temporale *Next* su una proposizione o formula, quella proposizione o formula deve essere vera nell'atomo seguente.
 
 ### Regole di espansione
@@ -12,7 +12,7 @@ Si adottano delle regole di espansione dei connettivi temporali:
 ### Chiusura di una formula $\varphi$
 Con $\Phi_\varphi$ si indica la chiusura di una formula $\varphi$, il più piccolo insieme di formule che soddisfano:
 - $\varphi \in \Phi_\varphi$, la formula stessa appartiene all'insieme
-- Per ogni $p \in \Phi_\varphi$ e per ogni sotto-formula $q$ di $p$, $q \in \Phi_\varphi$. L'insieme contiene tutte le sotto-formule di tutte le formule.
+- Per ogni $p \in \Phi_\varphi$ e per ogni sotto-formula $q$ di $p$, $p, q \in \Phi_\varphi$. L'insieme contiene tutte le sotto-formule di tutte le formule.
 - Per ogni $p \in \Phi_\varphi$, $\lnot p \in \Phi_\varphi$. L'insieme contiene tutte le sotto-formule negate.
 - Per ogni $\psi \in \{Gp,Fp,pUq\}$, se $\psi \in \Phi_\varphi$ allora $X \psi \in \Phi_\varphi$. Per ogni formula comprendente un connettivo temporale nella formula, esiste anche il *next* di tale formula.
 

@@ -28,12 +28,12 @@ La relazione $\sim_{\mathcal{A}}$ su $A^*$ è definita come:
 
 $$\forall x,y \in A^{*}, x \sim_{\mathcal{A}} y \leftrightarrow \delta(q_{0},x) = \delta(q_{0},y)$$
 
-$x,z$ sono in relazione rispetto ad un DFA $\mathcal{A}$ se lo stato raggiunto dallo stato di input $q_0$ su entrambe le stringhe è lo stesso.
+$x,y$ sono in relazione rispetto ad un DFA $\mathcal{A}$ se lo stato raggiunto dallo stato di input $q_0$ su entrambe le stringhe è lo stesso.
 
 Questa relazione è di equivalenza ed è right invariant.
 #todo
 
-La cardinalità di questa relazione è limitata dal numero di stati $|Q|$ di $\mathcal{A}$: due stringhe sono in relazione si raggiunge lo stesso stato da quello iniziale, ed abbiamo un numero finito di stati, $|Q|$. La relazione ha quindi **indice finito**.
+La cardinalità di questa relazione è limitata dal numero di stati $|Q|$ di $\mathcal{A}$: due stringhe sono in relazione se si raggiunge lo stesso stato da quello iniziale, ed abbiamo un numero finito di stati $|Q|$. La relazione ha quindi **indice finito**.
 
 ## Teorema di Myhill-Nerode
 

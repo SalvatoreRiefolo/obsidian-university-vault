@@ -1,3 +1,4 @@
+Le espressioni regolari sono un modo per definire i **linguaggi regolari**, una classe di linguaggi formali, rispetto ad un alfabeto $A$.
 
 ## Espressioni regolari ristrette
 
@@ -27,8 +28,9 @@ Si dimostrano i due versi dell'implicazione.
 
 ### FSA $\Rightarrow$ RRE
 #todo 
-Dato $\mathcal{A} = (\{q_1,\dots,q_n\},A,\delta,q_1,F)$ un automa a stati finiti definiamo $R_{i,j}^{k}$ come l'insieme di parole $x$ tali che $\delta(q_{i,x})= q_j$ e per ogni $y$ prefisso di $x$, con $y \neq x,y\neq \varepsilon$ si ha che $\delta(q_{i,y})= q_{l}, l\leq k$.
-Applicando la funzione di transizione sulla parola $x$ in stato $q_i$ raggiungiamo $q_j$), ed applicando la funzione di transizione sulla parola $y$ con lo stesso stato raggiungiamo lo stato $q_l$ con indice $\leq k$.
+Dato $\mathcal{A} = (\{q_1,\dots,q_n\},A,\delta,q_1,F)$ un automa a stati finiti definiamo $R_{i,j}^{k}$ come l'insieme di parole $x$ tali che $\delta(q_{i},x)= q_j$ e per ogni $y$ prefisso di $x$, con $y \neq x,y\neq \varepsilon$ si ha che $\delta(q_{i},y)= q_{l}, l\leq k$.
+
+Applicando la funzione di transizione sulla parola $x$ in stato $q_i$ raggiungiamo $q_j$, ed applicando la funzione di transizione sulla parola $y$ con lo stesso stato raggiungiamo lo stato $q_l$ con indice $\leq k$.
 
 ### RRE $\Rightarrow$ NDA con $\varepsilon$-mosse
 #todo 

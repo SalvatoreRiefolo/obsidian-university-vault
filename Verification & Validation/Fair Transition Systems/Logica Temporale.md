@@ -2,6 +2,7 @@ Ci si vuole assicurare che certe proprietà siano sempre (necessariamente)/a vol
 
 Si parla di **Linear Temporal Logic (LTL)** quando non si hanno ramificazioni nel futuro. La variante **Propositional LTL (PLTL)** aggiunge la logica proposizionale ai connettivi temporali.
 
+
 ## Sintassi
 - $X$: "**next**", connettivo unario. L'argomento è $true$ al prossimo istante temporale.
 - $U$: "**until**", connettivo binario. $p U q$ indica che deve esistere un momento nel futuro dove $q=true$ e fino a quel momento $p=true$.
@@ -12,13 +13,15 @@ Si parla di **Linear Temporal Logic (LTL)** quando non si hanno ramificazioni ne
 
 $F,G$ sono **inter-definibili**: $Fp = \lnot G \lnot p$, $Gp = \lnot F \lnot p$.
 
+
 ## Condizioni di fairness in LTL
 #esame 
 
 Si definiscono con $En$ l'abilitazione di una transizione e $Tk$ la sua esecuzione. 
 
-- **Compassione**: viene definita come $GFEn \rightarrow GFTk$: se una transizione è abilitata infinite volte nel futuro, allora è eseguita infinite volte nel futuro.
 - **Giustizia**: viene definita come $G(GEn \rightarrow FTk)$: ovunque nel futuro, se una transizione è sempre abilitata prima o poi verrà eseguita.
+- **Compassione**: viene definita come $GFEn \rightarrow GFTk$: se una transizione è abilitata infinite volte nel futuro, allora è eseguita infinite volte nel futuro.
+
 
 ## Strutture di LTL
 
@@ -52,8 +55,8 @@ Dato un programma $P$ ed una formula LTL $\varphi$ si costruisce il **grafo del 
 
 Il grafo risultante ha le seguenti componenti:
 - **Nodi $(s,A)$** con $s$ stato di $P$ e $A$ un atomo consistente con $s$.
-- **Arco $\tau$-labeled**: esiste tale arco tra $(s,A)$ ad $(s,A')$ se nel tableau sfrondato: 
-	- $s' = \tau(s)$, cioè $s'$ è un successore di $s$.
+- **Arco $\tau$-labeled**: esiste tale arco da $(s,A)$ a $(s',A')$ se nel tableau sfrondato: 
+	- $s' = \tau(s)$, cioè $s'$ è il successore di $s$.
 	- $A' \in \delta(A)$, cioè $A'$ è un successore di $A$.
 - **$\varphi$-nodi iniziali**: coppie $(s, A)$ dove $s$ è uno stato iniziale e $A$ è un atomo iniziale, ed $A$ è consistente con $s$.
 
