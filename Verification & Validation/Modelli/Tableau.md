@@ -5,8 +5,8 @@ Se un atomo presenta un connettivo temporale *Next* su una proposizione o formul
 ### Regole di espansione
 Si adottano delle regole di espansione dei connettivi temporali:
 
-- $GP \approx P \land XGp$
-- $FP \approx p \lor XFp$
+- $Gp \approx P \land XGp$
+- $Fp \approx p \lor XFp$
 - $pUq \approx q \lor (p \land X(pUq))$
 
 ### Chiusura di una formula $\varphi$
@@ -32,7 +32,7 @@ Ad esempio $A = \{\varphi, Gp, F \lnot p, XGp, XF \lnot p, p\}$ è un atomo (nes
 
 Gli atomi sono i **nodi** del tableau, e rappresentano lo stato di un modello.
 
-Un insieme $S \subseteq \Phi_\varphi$ è **mutualmente soddisfacibile** se esiste un modello $\sigma$ ed una posizione $j$ tali che ogni formula $p \in S$ sia vera in posizione $j$.
+Un insieme di formule $S \subseteq \Phi_\varphi$ è **mutualmente soddisfacibile** se esiste un modello $\sigma$ ed una posizione $j$ tali che ogni formula $p \in S$ sia vera in posizione $j$.
 Per ogni insieme di formule mutualmente soddisfacibili esiste un $\varphi$-atomo tale che $S \subseteq A$.
 
 L'obiettivo è usare gli atomi all'interno del tableau per controllare che un modello esista.
@@ -41,9 +41,9 @@ L'obiettivo è usare gli atomi all'interno del tableau per controllare che un mo
 Una formula base è una proposizione $p$ o una formula della forma $Xp$. Se una formula base è in un atomo, allora la chiusura della formula è nell'atomo. Lo stesso vale per la sua assenza.
 
 ### Percorso indotto
-Dato un modello $\delta$ di $\varphi$, il percorso infinito $\pi_{\delta}: A_0,A_1,\dots$ nel tableau $T_\varphi$ è **indotto da $\delta$** se per ogni $j \geq 0$ e per ogni $p \in \Phi_\varphi$, $(\delta, j) \Vdash p$ se e solo se $p \in A_j$.
+Dato un modello $\sigma$ di $\varphi$, il percorso infinito $\pi_{\sigma}: A_0,A_1,\dots$ nel tableau $T_\varphi$ è **indotto da $\sigma$** se per ogni $j \geq 0$ e per ogni $p \in \Phi_\varphi$, $(\sigma, j) \Vdash p$ se e solo se $p \in A_j$.
 
-Dati $\varphi$ e $T_\varphi$, per ogni $\delta$ di $\varphi$ esiste un percorso indotto.
+Dati $\varphi$ e $T_\varphi$, per ogni $\sigma$ di $\varphi$ esiste un percorso indotto.
 
 ### Promessa 
 La formula $\psi$ promette la formula $r$ se $\psi$ ha una delle possibili forme:
@@ -61,7 +61,7 @@ Un atomo $A$ **soddisfa** (fulfill) $\psi$ che promette $r$ se $\lnot \psi \in A
 
 ### Percorso soddisfacente
 Un percorso $\pi$ in $T_\varphi$ è soddisfacente se per ogni promessa $\psi \in \Phi_{\varphi}$, $\pi$ contiene infiniti atomi $A_j$ che soddisfano $\psi$ ($\lnot \psi \in A_{j} \lor r \in A_j$).
-Un percorso $\pi_\delta$ è indotto da un modello se e solo se è soddisfacente.
+Un percorso $\pi_\sigma$ è indotto da un modello se e solo se è soddisfacente.
 Una formula $\varphi$ è soddisfacibile se e solo se $T_\varphi$ contiene un percorso soddisfacente $\pi = A_1,A_2,\dots$ tale che $\varphi \in A_0$.
 
 ### Esistenza di un percorso soddisfacente

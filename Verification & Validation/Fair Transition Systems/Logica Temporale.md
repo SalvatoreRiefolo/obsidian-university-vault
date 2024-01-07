@@ -25,10 +25,10 @@ Si definiscono con $En$ l'abilitazione di una transizione e $Tk$ la sua esecuzio
 
 ## Strutture di LTL
 
-Una **Linear Temporal Structure** è definita da una tripla $M=(S,X,L)$, dove:
+Una **Linear Temporal Structure** è definita da una tripla $M=(S,x,L)$, dove:
 
 - $S$ è l'insieme di stati.
-- $X: \mathbb{N} \rightarrow S$ sequenza di stati.
+- $x: \mathbb{N} \rightarrow S$ sequenza di stati.
 - $L: S \rightarrow AP^{Q}$ una funzione di labeling.
 
 La **verità** di una formula nella è struttura è definita come $M, x \models p$: in posizione $x$ della struttura $M$, $p=true$.

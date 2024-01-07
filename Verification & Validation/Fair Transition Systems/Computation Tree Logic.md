@@ -10,7 +10,7 @@ Un CTL è rappresentabile tramite un albero, potenzialmente infinito se il grafo
 ### Quantificatori
 
 $X,U$ (next, until), sono chiamati **quantificatori di stato**.
-$A,E$ (tutti, tutti), sono chiamati **quantificatori di computazione** o percorso (**path**).
+$A,E$ (tutti, esiste), sono chiamati **quantificatori di computazione** o percorso (**path**).
 In una formula CTL i quantificatori di stato e di computazione sono alternati.
 
 Una formula CTL è un insieme di formule di stato. Il futuro si ramifica, ma il passato (solitamente) è lineare.
