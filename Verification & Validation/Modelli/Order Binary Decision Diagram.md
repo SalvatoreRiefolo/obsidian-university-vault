@@ -9,7 +9,7 @@ Tuttavia applicando delle euristiche si possono ottenere buoni risultati: si rac
 ### Rappresentazione di funzioni booleane
 Una formula $f_v(x_1,\dots,x_n)$ è definita come:
 1. se $v$ è terminale, se il suo valore è $1 \rightarrow f_v(\dots)=1$ , altrimenti $f_v(\dots)=0$.
-2. se $v$ è interno con $var(v) = x_i$, $f_{v(\dots)}= \lnot x_{i} \land f_{low(v)}(\dots) \lor f_{high(v)}(\dots)$.
+2. se $v$ è interno con $var(v) = x_i$, $f_{v}(\dots)= \lnot x_{i} \land f_{low(v)}(\dots) \lor f_{high(v)}(\dots)$.
 
 ### Espansione di Shannon
 
@@ -28,7 +28,7 @@ $$f= (\lnot x \land f|_{x\leftarrow 0}) \lor (x \land f|_{x\leftarrow 1})$$
 
 Utilizzando Apply, si creano un numero esponenziale di sotto-problemi rispetto al numero di variabili nella funzione: ogni sotto-problema può generare due sotto-problemi.
 
-È possibile evitare il costo esponenziale effettuando **caching**. Ogni sotto-problema corrisponde ad una coppia di OBDD, i sotto-grafi dell'OBDD originale. Ogni sotto-grafo è univocamente identificato dalla sua radice, quindi il numero di sotto-grafi distinti è limitato dalla dimensione degli OBDD di $f,f'$, cioè $O(|f| \cdot |f'|$. La complessità è quindi al più **quadratica** rispetto alla dimensione delle formule.
+È possibile evitare il costo esponenziale effettuando **caching**. Ogni sotto-problema corrisponde ad una coppia di OBDD, i sotto-grafi dell'OBDD originale. Ogni sotto-grafo è univocamente identificato dalla sua radice, quindi il numero di sotto-grafi distinti è limitato dalla dimensione degli OBDD di $f,f'$, cioè $O(|f| \cdot |f'|)$. La complessità è quindi al più **quadratica** rispetto alla dimensione delle formule.
 Prima di risolvere un sotto-problema, si accede alla cache con le radici delle due sotto-formule: se il sotto-problema è già stato risolto si riutilizza il risultato ottenuto.
 
 ## Regole di riduzione

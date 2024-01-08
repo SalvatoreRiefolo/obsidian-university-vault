@@ -26,7 +26,7 @@ Giustizia e compassione sono anche chiamati **fairness requirements**.
 
 Le **transizioni** $\tau \in T$ possono essere rappresentate come formule FO: $\varphi_{\tau}(V,V')$, chiamate **relazioni di transizione**. 
 Sono l'insieme di stati $V'$ raggiungibili da $V$. 
-La transizione mettere in relazione uno stato $s$ ed i suoi $\tau$-successori $s' \in \tau(s)$.
+La transizione mette in relazione uno stato $s$ ed i suoi $\tau$-successori $s' \in \tau(s)$.
 
 >[!Esempio]
 >Si rappresentano come $x,y,z,\dots$ i valori di variabili in $s$ e $x',y',z',\dots$ i loro valori in $s'$.

@@ -55,7 +55,7 @@ Ottenuta la formula $S1S_0$, questa può essere tradotta in un BA per induzione 
 
 ### Problemi in $S1S$
 
-Come conseguenza del teorema di Büchi, la teoria di $S1S$ è **decidibile** in quanto è possibile convertire una formula in un BA e applicare [[4. Riduzioni#Completezza in $L$ e $NL$#$Reachability$|Reachability]] e controlliamo che uno stato finale venga raggiunto. 
+Come conseguenza del teorema di Büchi, la teoria di $S1S$ è **decidibile** in quanto è possibile convertire una formula in un BA e applicare [[4. Riduzioni#Completezza in $L$ e $NL$#$Reachability$|Reachability]] controllando che uno stato finale venga raggiunto. 
 
 L'emptiness problem è decidibile in tempo polinomiale: si converte da una formula $S1S$ ad un BU e si effettua il controllo.
 
@@ -78,7 +78,7 @@ Ad esempio:
 - La formula $\varphi = \exists X (0 \in X)$ diventa $\psi = \exists X (\forall x (x \in X \rightarrow x < y) \land 0 \in X)$
 - La formula $\varphi = \forall X (0 \in X)$ diventa $\psi = \forall X (\forall x (x \in X \rightarrow x < y) \land 0 \in X)$
 
-Data la formula $S1S$ $\varphi(X_1,\cdot,X_n)$ che definisce $W$, la formula $wS1S$ che definisce $\overrightarrow W$ è 
+Data la formula $S1S$ $\varphi(X_1,\dots,X_n)$ che definisce $W$, la formula $wS1S$ che definisce $\overrightarrow W$ è 
 
 $$\forall x \exists y (x < y \land \psi(X_1,\dots,X_n,y))$$
 

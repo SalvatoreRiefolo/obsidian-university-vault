@@ -13,14 +13,14 @@ Rappresentano sequenze di istruzioni per cui solo le condizioni di terminazione 
 Servono per modellare problemi come la **mutua esclusione** ed il paradigma **producer/consumer**.
 
 - **Noncritical**: un attività di un componente non critica dal punto di vista della gestione delle risorse, poiché vengono utilizzare risorse private. La terminazione non è obbligatoria.
-- **Critical**: condensa in un'istruzione unica un attività critica dal punto di vista della gestione delle risorse e che richiede coordinazione tra i componenti. **Deve** terminare (almeno giustizia deve essere imposta).
-- **Produce $x$**: l'attività assegna alla variabile $x$ un valore diverso da 0. **Deve** terminare.
-- **Consume $y$**: l'attività legge il valore di $y$ senza cambiarlo. **Deve terminare**.
+- **Critical**: condensa in un'istruzione unica un'attività critica dal punto di vista della gestione delle risorse e che richiede coordinazione tra i componenti. Deve terminare (almeno giustizia deve essere imposta).
+- **Produce $x$**: l'attività assegna alla variabile $x$ un valore diverso da 0. Deve terminare.
+- **Consume $y$**: l'attività legge il valore di $y$ senza cambiarlo. Deve terminare.
 
 ### Istruzioni composte
 - **Condizionale $\text{if} \, c \, \text{then} \, s_{1} \, \text{else} \, s_{2}$** con $c$ condizione booleana, $s_1,s_2$ istruzioni. A differenza di **await**, è sempre attiva ed una delle due istruzioni è sempre eseguita. Un caso particolare è $\text{if} \, c \, \text{then} \, s$: se la condizione risulta falsa l'istruzione termina in uno step.
 - **Concatenazione $S_1;S_2;\dots;S_k$**, il primo step dell'esecuzione coincide con il primo step di $S_1$.
-- **Selection $S_1$ or $S_2$ or $\dots$ or $S_k$** sceglie non deterministicamente una delle istruzioni abilitate e la esegue; se nessuna istruzione è abilitata l'esecuzione di Select è posticipata
+- **Selection $S_1$ or $S_2$ or $\dots$ or $S_k$** sceglie non deterministicamente una delle istruzioni abilitate e la esegue; se nessuna istruzione è abilitata l'esecuzione di Selection è posticipata
 - **While $c$ do $S$** esegue $S$ finché la condizione $c$ è vera.
 - **Cooperation** modella l'esecuzione parallela: all'inizio dell'esecuzione di **cooperation** si sposta il controllo all'inizio di tutte le istruzioni da eseguire, e quando queste sono completate si trasferisce il controllo dalla fine di queste alla fine dell'istruzione **cooperation**.
 - **Block** permette di dichiarare localmente delle variabili in base ad una formula/predicato.

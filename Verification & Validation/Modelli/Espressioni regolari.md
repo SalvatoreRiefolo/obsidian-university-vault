@@ -61,7 +61,7 @@ Definiamo $\mathcal{A}$ per il linguaggio $L_{1}\cap L_{2}$ come $\mathcal{A} = 
 $\mathcal{A}_1, \mathcal{A}_2$ lavorano in sincronia partendo e finendo nello stesso momento.
 La funzione di transizione di $\mathcal{A}$ fa eseguire le funzioni di transizione di $\mathcal{A}_1, \mathcal{A}_2$: $\delta((q_i,q_j),a)= (\delta_1(q_i,a),\delta_2(q_j,a))$.
 
-Essendo FA e e RE equivalenti possiamo convertire le RE in FA, calcolare l'intersezione o la complementazione e convertire nuovamente in RE.
+Essendo FA e RE equivalenti possiamo convertire le RE in FA, calcolare l'intersezione o la complementazione e convertire nuovamente in RE.
 
 ## Espressioni $\omega$-regolari
 
@@ -71,12 +71,12 @@ Sono definite come $\bigcup\limits_{i=1}^{n} u_{i}\cdot V_{i}^{\omega}$, con $u_
 
 Si definisce con $s \rightarrow_{w} s'$ l'esistenza di una computazione di un automata $\mathcal{A}$ su parola $w$ che muove lo stato da $s$ a $s'$. 
 Per ogni coppia di stati $s,s'$ definiamo l'insieme $W_{s,s'} = \{w: s \rightarrow_{w} s'\}$; questo insieme è un linguaggio regolare.
-Possiamo quindi definire un FSA $\mathcal{A}$ che riconosce questo linguaggio come $(Q,A,\Delta,s,{s'})$
+Possiamo quindi definire un FSA $\mathcal{A}$ che riconosce questo linguaggio come $(Q,A,\Delta,s,{s'})$.
 
 ## Teorema: equivalenza tra espressioni $\omega$-regolari e BA
 Per qualunque BA esiste un'espressione $\omega$-regolare che definisce lo stesso linguaggio e viceversa.
 
-Si dimostrano i due versi dell'implicazione
+Si dimostrano i due versi dell'implicazione.
 
 ### $\omega$-RE $\Rightarrow$ BA
 Da definizione $L = \bigcup\limits_{i=1}^{n} u_{i}\cdot V_{i}^{\omega}$. 

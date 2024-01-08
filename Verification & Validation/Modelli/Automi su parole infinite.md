@@ -1,6 +1,7 @@
-SI passa da parole finite a parole **infinite** su un insieme **finito** $A$; queste parole vengono chiamate **$\omega$-parole**.
+Si passa da parole finite a parole **infinite** su un insieme **finito** $A$; queste parole vengono chiamate **$\omega$-parole**.
 Si passa da $A^*$ ad $A^{\omega}$, l'universo di tutte le parole infinite costruibili su $A$. Si definisce $A^{\infty} = A^{*} \cup A^{\omega}$.
-Si usano $\alpha, \beta, \gamma,\dots$ per denotare le $\omega$-parole. Le $\omega$-parole sono composte da un infinita successione di simboli $\alpha(1)\alpha(2)\dots$, con $\alpha(i) \in A$. Dati due indici $n,m$, $a(n,m) = \alpha(n)\alpha(n+1),\dots,\alpha(m-1)$ è la **sotto parola finita** tra gli indici $n,m$ con $n \leq m$.
+Si usano $\alpha, \beta, \gamma,\dots$ per denotare le $\omega$-parole. Le $\omega$-parole sono composte da un infinita successione di simboli $\alpha(1)\alpha(2)\dots$, con $\alpha(i) \in A$. 
+Dati due indici $n,m$, $a(n,m) = \alpha(n)\alpha(n+1),\dots,\alpha(m-1)$ è la **sotto parola finita** tra gli indici $n,m$ con $n \leq m$.
 Si definisce $\exists^{\omega}_n$ come "esistono infinitamente tante posizioni $n$" e $\exists^{< \omega}_n$ con "esistono un numero finito di $n$".
 
 Dato un insieme $W \subseteq A^*$ (insieme finito di parole finite) si definiscono i seguenti insiemi di parole infinite:
@@ -27,6 +28,7 @@ Un linguaggio $L \subseteq A^{\omega}$ è **$\omega$-regolare** se esiste un BA 
 #esame
 
 1. Se $V \subseteq A^*$ è regolare, allora $V^{\omega}$ è $\omega$-regolare.
+
 Sia $\mathcal{A}$ un FSA che riconosce $V$. Possiamo assumere senza perdita di generalità che $\varepsilon \notin V$, e che non ci siano archi entranti in $q_0$ nel grafo dell'esecuzione.
 
 Un BA per $V^{\omega}$ può essere ottenuto aggiungendo ad $\mathcal{A}$ una transizione $(s, a, q_0)$ (leggendo $a$ nello stato $s$ ci si sposta in $q_0$) per ogni transizione $(s, a, s') \in \Delta, \, s' \in F$ e definendo $q_0$ come unico stato finale del BA. In questo modo dividiamo parole infinite in parole finite appartenenti a $V$.
