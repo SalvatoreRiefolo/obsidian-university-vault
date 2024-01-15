@@ -1,3 +1,8 @@
+---
+tags: 
+  - information-retrieval
+---
+
 L'idea è di limitare il numero di documenti recuperati su cui effettuare il ranking.
 
 Metriche come Average Precision e nDCG non sono buoni indicatori per stabilire la bontà dei risultati quando molti documenti irrilevanti sono recuperati "in coda". Queste metriche variano poco in questi casi e non permettono di valutare la qualità dei risultati.

@@ -1,3 +1,7 @@
+---
+tags: 
+  - information-retrieval
+---
 
 Compressione indice:
 1. Compressioni dati (documenti)

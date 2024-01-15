@@ -1,3 +1,8 @@
+---
+tags: 
+  - information-retrieval
+---
+
 Idea: usare termini come feature per dividere i dati in uno spazio vettoriale t-dimensionale (t = dimensione vocabolario).
 
 Ragionando in due dimensioni, i dati si possono separare usando un iperpiano come decision boundary.

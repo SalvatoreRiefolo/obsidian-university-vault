@@ -1,3 +1,7 @@
+---
+tags: 
+  - information-retrieval
+---
 
 L'**Information Retrieval** è la pratica di **trovare materiali** di natura **non strutturata** (testuale) che soddisfa un **bisogno di informazione** in una **collezione vasta**.
 

@@ -49,7 +49,23 @@ Gli NFA sono almeno tanto espressivi quando i DFA, e tutti i linguaggio definibi
 
 ### Equivalenza di DFA e NFA (dimostrazione)
 
-#todo
+Dato un NFA $\mathcal{A}$ il corrispondente DFA $\mathcal{A'} = (Q', A, \delta', q_0', F')$ è costruito nel seguente modo:
+
+- $Q' = 2^Q$, il powerset degli stati di $\mathcal{A}$.
+- $q_0' = {q_0}$, l'unico stato iniziale.
+- $\forall P \in Q', \forall a \in A$ vale che $\delta'(P,a) = \delta(P,a)$.
+- $F' = \{P \in Q' : P \cap F \neq \varnothing\}$ gli insiemi di stati che intersecati con gli stati finali di $\mathcal{A}$ contengono qualche stato.
+
+Si vuole dimostrare che lo stato restituito dalla funzione di transizione applicata alla parola $w$ e allo stato $q_0$ da $\mathcal{A'}$ coincide con con l'insieme di stati restituito sulla stessa parola partendo dallo stato iniziale da $\mathcal{A}$.
+
+Se $|w| = 0$ la funzione restituisce in entrambi i casi lo stato $\{q_0\}$.
+
+Supponiamo che la tesi valga per parole di lunghezza fino a $n$. Consideriamo la parola $wa$ di lunghezza $n+1$: per definizione di FA, $\delta'(q_0,wa) = \delta'(\delta'(q_0, w), a)$. Sfruttando l'ipotesi, $\delta'(q_0,wa) = \delta'(\delta(q_0, w), a) = \bigcup_{p\in\delta(q0, w)} \delta'(\{p\}, a) = \bigcup_{p\in\delta(q0, w)} \delta(p, a) = \delta(q_0, wa)$.
+
+$\mathcal{A'}$ accetta $w$ se e solo se $\delta'(q_0',w) \in F'$. Questo accade se $\delta(q_0,w) \in F'$, cioè se $\delta(q_0,w) \cup F \neq \varnothing$. Ciò vale se e solo se $\mathcal{A}$ accetta $w$. 
+Deriva che $L(\mathcal{A}) = L(\mathcal{A'})$.
+
+Il numero di stati del DFA è esponenziale rispetto al numero di stati del corrispondente NFA.
 
 ## NFA con $\varepsilon$-mosse
 Un NFA con $\varepsilon$-mosse $\mathcal{A}$ è una tupla $(Q,A,\delta, q_{0}, F)$ dove:
@@ -64,6 +80,7 @@ Possiamo generalizzare $\delta$ da simboli a parole:
 
 >[!Teorema]
 >Per tutti gli NFA con $\varepsilon$-mosse $\mathcal{A}$ esiste un NFA $\mathcal{A'}$ tale che $L(\mathcal{A}) = L(\mathcal{A'})$ e vice versa.
+>Questo NFA è uguale all'NFA con $\varepsilon$-mosse se la $\varepsilon$-chiusura dello stato iniziale non porta in uno stato finale. In caso contrario, lo stato iniziale viene aggiunto agli stati finali: $F' = F \cup \{q_0\}$.
 >
 >Segue che NFA $\equiv$ DFA $\equiv$ NFA con $\varepsilon$-mosse.
 

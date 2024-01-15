@@ -1,3 +1,8 @@
+---
+tags: 
+  - information-retrieval
+---
+
 [[2. Altre metriche#Discounted Cumulative Gain (DCG)|DCG]] è una metrica che da un **ranking totale** su rilevanza **categoriale**.
 
 Si usano categorie discrete (es: 0 = rilevante, 1 = poco rilevante...) e si ordinano i tutti i documenti dal più rilevante al meno rilevante.

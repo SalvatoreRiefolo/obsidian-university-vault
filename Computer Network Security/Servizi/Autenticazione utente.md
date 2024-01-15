@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 Il processo di determinare se un utente (o applicazione) sia chi dichiara di essere. Permette di gestire il controllo dell'accesso alle risorse di un sistema.
 
 ### Metodi di autenticazione

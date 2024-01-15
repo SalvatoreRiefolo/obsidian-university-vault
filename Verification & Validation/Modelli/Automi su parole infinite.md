@@ -4,9 +4,11 @@ Si usano $\alpha, \beta, \gamma,\dots$ per denotare le $\omega$-parole. Le $\ome
 Dati due indici $n,m$, $a(n,m) = \alpha(n)\alpha(n+1),\dots,\alpha(m-1)$ è la **sotto parola finita** tra gli indici $n,m$ con $n \leq m$.
 Si definisce $\exists^{\omega}_n$ come "esistono infinitamente tante posizioni $n$" e $\exists^{< \omega}_n$ con "esistono un numero finito di $n$".
 
-Dato un insieme $W \subseteq A^*$ (insieme finito di parole finite) si definiscono i seguenti insiemi di parole infinite:
+Dato un insieme $W \subseteq A^*$ (insieme infinito di parole finite) si definiscono i seguenti insiemi di parole infinite:
 - $W^{\omega} = \{\alpha \in A^{\omega}: \alpha = w_{0}w_{1}\dots w_{i} \in W, \, \forall i \geq 0\}$, chiamato **$\omega$-chiusura** di $W$.
-- $\overrightarrow{W} = \{\alpha \in A^{\omega}: \exists^{\omega}_n \alpha(0, n) \in W\}$, chiamato **chiusura vettoriale** di $W$. È l'insieme infinito di prefissi.
+- $\overrightarrow{W} = \{\alpha \in A^{\omega}: \exists^{\omega}_n \alpha(0, n) \in W\}$, chiamato **chiusura vettoriale** di $W$. È l'insieme infinito di parole con prefissi appartenenti a $W$.
+
+$W^{\omega}, \overrightarrow{W}$ possono coincidere (ad esempio quando $W$ ha forma $(ab)^*$) o essere diversi (ad esempio quando $W$ ha forma $(a^*b) \cup (cd^*)$)
 
 Si definiscono con $In(\alpha) = \{a \in A: \exists^{\omega}_{n}\alpha(n) = a\}$ i simboli di $A$ che occorrono infinite volte in $\alpha$.
 
@@ -40,7 +42,7 @@ Un BA per $V^{\omega}$ può essere ottenuto aggiungendo ad $\mathcal{A}$ una tra
 ### Chiusura sotto complementazione
 Se $L \subseteq A^{\omega}$ è un linguaggio $\omega$-regolare allora $\overline L$ è $\omega$-regolare. È possibile costruire un BA per $\overline L$ partendo da un BA per $L$.
 
-Dato un BA $\mathcal{A}$ ed una [[Relazioni#Relazione $ approx_{ mathcal{A}}$|relazione]] $\approx_{\mathcal{A}}$ possiamo derivare dai due lemmi sulla relazione che  $\overline L = \bigcup U \cdot V^{\omega}$ per $U,V$ $\approx_{\mathcal{A}}$-classi  tali che $U \cdot V^{\omega} \cap \overline L \neq \varnothing$. Essendo $U,V$ linguaggi regolari ed i $\omega$-linguaggi chiusi sotto concatenazione e unione, un BA che riconosce questi linguaggi riconosce anche $\overline L$.
+Dato un BA $\mathcal{A}$ ed una [[Relazioni#Relazione $ approx_{ mathcal{A}}$|congruenza di indice finito]] $\approx_{\mathcal{A}}$ possiamo derivare dai due lemmi sulla relazione che  $\overline L = \bigcup U \cdot V^{\omega}$ per $U,V$ $\approx_{\mathcal{A}}$-classi  tali che $U \cdot V^{\omega} \cap \overline L \neq \varnothing$. Essendo $U,V$ linguaggi regolari ed i $\omega$-linguaggi chiusi sotto concatenazione e unione, un BA che riconosce questi linguaggi riconosce anche $\overline L$.
 
 Una conseguenza della chiusura sotto complementazione è che due gli $\omega$-linguaggi sono univocamente identificati dalle lor $\omega$-parole $UP$.
 

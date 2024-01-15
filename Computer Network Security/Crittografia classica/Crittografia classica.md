@@ -1,3 +1,7 @@
+---
+tags: 
+  - computer-network-security
+---
 
 Due tipi di cifratura:
 - **Simmetrica**: entrambe le parti condividono un segreto (**chiave**) con cui poter cifrare il messaggio e leggere il messaggio cifrato. Le due azioni sono invertibili solo se viene usata la stessa chiave.

@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 Esistono due famiglie di protocolli per trasferire email:
 1. **Simple Mail Transfer Protocol (SMTP)** viene usato per trasportare messaggi da mittente a destinatario.
 2. **Internet Mail Access Protocol (IMAP) e Post Office Protocol (POP)** sono usati per trasferire messaggio tra server email. I server si autenticano tra loro e inviano comandi per lo scambio di email.

@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 I numeri binari generati casualmente sono usati in crittografia per distribuire chiavi e in schemi di autenticazione, generare chiavi asimmetriche e generare flussi di bit per cifratura simmetrica.
 
 Gli algoritmi usati sono deterministici e le sequenze non sono quindi veramente casuali, ma un buon algoritmo genera sequenze che passano molti test di casualità. I numeri così generati si definiscono **pseudocasuali**.

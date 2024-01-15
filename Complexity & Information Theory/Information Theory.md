@@ -1,3 +1,8 @@
+---
+tags: 
+  - complexity-information-theory
+---
+
 La quantità di informazione trasmessa attraverso una certa stringa è correlata alla sua probabilità: più è bassa la probabilità che un evento accada, più è l'informazione che esso trasmette.
 
 Una prima definizione può essere data da 

@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 Evoluzione di Secure Sockets Layers (SSL), **Transport Layer Security (TLS)** è un servizio general purpose implementato come una serie di protocolli basati su TCP.
 Questi protocolli possono essere divisi in due **layers**:
 1. **Record Protocol**, che implementa le trasformazioni di sicurezza.

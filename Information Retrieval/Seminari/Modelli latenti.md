@@ -1,3 +1,8 @@
+---
+tags: 
+  - information-retrieval
+---
+
 Si definiscono i **topic**, a cui sono associate parole (ogni parola appartiene ad un topic). Un documento tratta più topic diversi: queste sono variabili **latenti** (nascoste) del documento.
 
 L'obiettivo è trovare pattern latenti in un insieme documenti usando le distribuzioni statistiche dei termini da usare nel recupero e nel clustering senza supervisione. I topic vengono creati automaticamente: il numero di topics $k$ è un parametro controllabile.

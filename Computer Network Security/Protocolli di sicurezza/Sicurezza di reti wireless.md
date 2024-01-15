@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 Una rete wireless presenta più rischi alla sicurezza di una tradizionale rete cablata:
 - Il networking avviene solitamente con comunicazioni broadcast, molto più suscettibili ad eavesdropping.
 - Possono essere portatili, permettendo accesso al di fuori di un perimetro stabilito.

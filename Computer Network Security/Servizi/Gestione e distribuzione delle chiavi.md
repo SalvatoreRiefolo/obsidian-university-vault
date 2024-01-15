@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 Le chiavi sono tanto sicure quanto protette: generazione, persistenza, rimpiazzo e distribuzione devono essere sicuri.
 Occorre inoltre controllare gli utilizzi delle chiavi ed il contesto di utilizzo.
 

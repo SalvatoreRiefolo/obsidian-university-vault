@@ -1,3 +1,8 @@
+---
+tags: 
+  - computer-network-security
+---
+
 - Un **gruppo** $G$ è un insieme di elementi con un'operazione binaria $\star$ che associa coppie di elementi $(a,b) \in G$ ad elementi $(a \star b) \in G$, tali che **chiusura**, **associatività**, **identità**. **inverso** e **commutatività** sono definiti per coppie di elementi e operazione. 
 - Un **gruppo ciclico** è un gruppo per cui vale l'applicazione ripetuta dell'operatore. Ad esempio $a^{3}=a \star a \star a$
 - Un **anello** è un gruppo per cui valgono anche **chiusura** e **associatività** per l'operazione di moltiplicazione, e le regole di **distributività**. Inoltre sono anche definiti la **commutatività della moltiplicazione**, **l'identità moltiplicativa** e l'impossibilità di svolgere **divisioni per zero**.

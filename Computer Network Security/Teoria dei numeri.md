@@ -1,3 +1,7 @@
+---
+tags: 
+  - computer-network-security
+---
 
 ## Divisibilità
 $b$ divide $a$ (indicato con $b | a$) se esiste un $m$ tale che $a=mb$, con $a,b,m$ numeri interi. Non c'è resto nella divisione.

@@ -3,7 +3,7 @@ Sia $A$ un insieme generico chiuso sotto concatenazione.
 
 ## Right invariant equivalence relation
 
-Una **relazione di equivalenza** $\sim$ su $A$ è **right invariant** in relazione alla concatenazione se: 
+Una **relazione di equivalenza** $\sim$ su un insieme $A$ è **right invariant** rispetto alla concatenazione se: 
 $$\forall x,y \in A, x \sim y \rightarrow \forall z \in A, xz \sim yz$$
 
 La concatenazione **a destra** preserva l'equivalenza.
@@ -39,7 +39,7 @@ La cardinalità di questa relazione è limitata dal numero di stati $|Q|$ di $\m
 
 Sia $L \subseteq A^*$. Le seguenti affermazioni sono equivalenti.
 1. $L$ è un linguaggio regolare.
-2. $L$ può essere espresso come l'unione delle classi di relazioni di equivalenza che sono sia right invariant sia di indice finito.
+2. $L$ può essere espresso come l'unione di classi di relazioni di equivalenza che sono sia right invariant sia di indice finito.
 3. $\sim_{L}$ è di indice finito.
 
 ### 1. $\rightarrow$ 2.

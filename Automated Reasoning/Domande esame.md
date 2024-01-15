@@ -1,3 +1,8 @@
+---
+tags: 
+  - automated-reasoning
+---
+
 1. Definizione formale CSP, COP e soluzione.
 	- Come si può usare CSP per risolvere COP
 	- Decidere se un CSP su domini finiti è consistente è NP-Hard?
