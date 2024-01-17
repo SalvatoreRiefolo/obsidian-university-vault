@@ -62,7 +62,7 @@ Se $|w| = 0$ la funzione restituisce in entrambi i casi lo stato $\{q_0\}$.
 
 Supponiamo che la tesi valga per parole di lunghezza fino a $n$. Consideriamo la parola $wa$ di lunghezza $n+1$: per definizione di FA, $\delta'(q_0,wa) = \delta'(\delta'(q_0, w), a)$. Sfruttando l'ipotesi, $\delta'(q_0,wa) = \delta'(\delta(q_0, w), a) = \bigcup_{p\in\delta(q0, w)} \delta'(\{p\}, a) = \bigcup_{p\in\delta(q0, w)} \delta(p, a) = \delta(q_0, wa)$.
 
-$\mathcal{A'}$ accetta $w$ se e solo se $\delta'(q_0',w) \in F'$. Questo accade se $\delta(q_0,w) \in F'$, cioè se $\delta(q_0,w) \cup F \neq \varnothing$. Ciò vale se e solo se $\mathcal{A}$ accetta $w$. 
+$\mathcal{A'}$ accetta $w$ se e solo se $\delta'(q_0',w) \in F'$. Questo accade se $\delta(q_0,w) \in F'$, cioè se $\delta(q_0,w) \cap F \neq \varnothing$. Ciò vale se e solo se $\mathcal{A}$ accetta $w$. 
 Deriva che $L(\mathcal{A}) = L(\mathcal{A'})$.
 
 Il numero di stati del DFA è esponenziale rispetto al numero di stati del corrispondente NFA.

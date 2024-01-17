@@ -26,36 +26,16 @@ $\mathcal{A}$ **accetta** una $\omega$-parola $\alpha$ se e solo se esiste una c
 
 Un linguaggio $L \subseteq A^{\omega}$ è **$\omega$-regolare** se esiste un BA $\mathcal{A}$ tale che $L = L(\mathcal{A})$
 
-## Proprietà di chiusura dei linguaggi $\omega$-regolari
-#esame
-
-1. Se $V \subseteq A^*$ è regolare, allora $V^{\omega}$ è $\omega$-regolare.
-
-Sia $\mathcal{A}$ un FSA che riconosce $V$. Possiamo assumere senza perdita di generalità che $\varepsilon \notin V$, e che non ci siano archi entranti in $q_0$ nel grafo dell'esecuzione.
-
-Un BA per $V^{\omega}$ può essere ottenuto aggiungendo ad $\mathcal{A}$ una transizione $(s, a, q_0)$ (leggendo $a$ nello stato $s$ ci si sposta in $q_0$) per ogni transizione $(s, a, s') \in \Delta, \, s' \in F$ e definendo $q_0$ come unico stato finale del BA. In questo modo dividiamo parole infinite in parole finite appartenenti a $V$.
-
-2. Se $V \subseteq A^*$ è regolare e $L \subseteq A^{\omega}$ è $\omega$-regolare, allora $V \cdot L$ è $\omega$-regolare.
-
-3. Se $L_{1}, L_{2} \subseteq A^{\omega}$ sono $\omega$-regolari, allora $L_{1} \cap L_{2}$ e $L_{1} \cup L_{2}$ sono $\omega$-regolari.
-
-### Chiusura sotto complementazione
-Se $L \subseteq A^{\omega}$ è un linguaggio $\omega$-regolare allora $\overline L$ è $\omega$-regolare. È possibile costruire un BA per $\overline L$ partendo da un BA per $L$.
-
-Dato un BA $\mathcal{A}$ ed una [[Relazioni#Relazione $ approx_{ mathcal{A}}$|congruenza di indice finito]] $\approx_{\mathcal{A}}$ possiamo derivare dai due lemmi sulla relazione che  $\overline L = \bigcup U \cdot V^{\omega}$ per $U,V$ $\approx_{\mathcal{A}}$-classi  tali che $U \cdot V^{\omega} \cap \overline L \neq \varnothing$. Essendo $U,V$ linguaggi regolari ed i $\omega$-linguaggi chiusi sotto concatenazione e unione, un BA che riconosce questi linguaggi riconosce anche $\overline L$.
-
-Una conseguenza della chiusura sotto complementazione è che due gli $\omega$-linguaggi sono univocamente identificati dalle lor $\omega$-parole $UP$.
-
-#todo dimostrazione
-
 ## Automi di Büchi deterministici
 
 Un **DBA** $\mathcal{A}$ è una quintupla $(Q,A,\delta, q_{0}, F)$. La definizione è la stessa dell'automa di Büchi non deterministico, ma $\delta$ è una funzione di transizione deterministica $Q \times A \rightarrow Q$
 
 Una computazione $\sigma$ su $\alpha$ ha successo se $In(\alpha) \cap F \neq \varnothing$: alcuni stati finali in $F$ sono raggiunti infinite volte.
 
+### Proprietà di chiusura
 I DBA sono chiusi sotto unione ed intersezione.
 
+### Lemmi
 Un linguaggio $L \in A^{\omega}$ è riconosciuto da un DBA se e solo se $L = \overrightarrow{W}$ per qualche linguaggio regolare $W \subseteq A^*$. Si dimostrano i due versi dell'implicazione.
 
 $\Rightarrow$) Sia $\mathcal{A}$ un DBA, $\mathcal{A}'$ il FSA su parole finite corrispondente e $W$ il linguaggio riconosciuto da $\mathcal{A}'$. Si dimostra che $L(\mathcal{A}) = \overrightarrow W$, l'insieme infinito di prefissi.
@@ -77,7 +57,7 @@ Una computazione $\sigma$ di $\mathcal{A}$ su una $\omega$-parola $\alpha$ ha su
 La versione non determinista, chiamata **NMA**, si ottiene sostituendo alla funzione $\delta$ la relazione $\Delta$.
 
 ### Relazione tra DMA e DBA
-È semplice dimostrare che ogni DBA è equivalente ad un DMA: sia $\mathcal{A}$ un DBA. Il DMA $\mathcal{A}'$ equivalente si ottiene definendo come $\mathcal{F} = \{P \subset Q : P \cap F \neq \varnothing \}$, l'insieme di stati che sono finali in $\mathcal{A}$.
+È semplice dimostrare che ogni DBA è equivalente ad un DMA: sia $\mathcal{A}$ un DBA. Il DMA $\mathcal{A}'$ equivalente si ottiene definendo come $\mathcal{F} = \{P \subset Q : P \cap F \neq \varnothing \}$, l'insieme di stati che sono finali in $\mathcal{A}$. L'opposto (ogni DMA è equivalente ad un DBA) non è vero.
 
 Segue che:
  - NBA $\equiv$ NMA
@@ -92,9 +72,9 @@ NBA e NMA hanno lo stesso potere espressivo, ed è possibile ottenere l'uno dall
 I DMA sono chiusi sotto unione, intersezione e complementazione.
 
 ### Lemmi
-Un $\omega$-linguaggio $L \subseteq A^{\omega}$ è riconosciuto da un DMA se e solo se $L$ una **combinazione booleana** su $A^{\omega}$ di linguaggio della forma $\overrightarrow W$, dove $W$ è un insieme regolare.
+1. Un $\omega$-linguaggio $L \subseteq A^{\omega}$ è riconosciuto da un DMA se e solo se $L$ una **combinazione booleana** su $A^{\omega}$ di linguaggio della forma $\overrightarrow W$, dove $W$ è un insieme regolare.
 
-Ogni $\omega$-linguaggio $L \subseteq A^{\omega}$ riconosciuto da un NBA può essere espresso come l'unione finita di linguaggio della forma $\overrightarrow U \cap \overline{\overrightarrow V}$ con $U,V$ linguaggio regolari.
+2. Ogni $\omega$-linguaggio $L \subseteq A^{\omega}$ riconosciuto da un NBA può essere espresso come l'unione finita di linguaggio della forma $\overrightarrow U \cap \overline{\overrightarrow V}$ con $U,V$ linguaggio regolari.
 
 
 #todo dimostrazione 74
