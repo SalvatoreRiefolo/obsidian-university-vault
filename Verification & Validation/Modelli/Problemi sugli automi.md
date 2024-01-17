@@ -7,7 +7,7 @@ Dati $\mathcal{A}, \mathcal{A'}$ due automi a stati finiti abbiamo:
 4. **Equivalence problem**: $L(\mathcal{A}) = L(\mathcal{A'})$. Si riduce all'inclusion problem: $L(\mathcal{A}_1) = L(\mathcal{A}_2) \equiv L(\mathcal{A}_1) \subseteq L(\mathcal{A}_2) \land L(\mathcal{A}_2) \subseteq L(\mathcal{A}_1)$
 
 ### Emptiness problem
-#todo 
+#todo pag 26
 
 
 ## Problemi su linguaggi $\omega$-regolari

@@ -22,7 +22,23 @@ $$\{Gp \land F \lnot p, Gp, F \lnot p, \lnot Gp, \lnot F \lnot p, XGp, XF \lnot 
 Per ogni formula $\varphi$ vale che $|\Phi_{\varphi}| < 4|\varphi|$. Questo perché dato un connettivo temporale, ad esempio $Gp$, le formule $Gp, \lnot Gp, XGp, \lnot XGp$ sono sempre presenti.
 
 ### Tabelle $\alpha$ e $\beta$
-#todo pagina 89
+
+Una formula $\alpha$ è vera in posizione $j$ se e solo se la formula $k(\alpha)$ è vera in posizione $j$.
+
+| $\alpha$    | $k(\alpha)$ |
+| ---------- | ---------  |
+| $p \land q$ | $p,q$     |
+| $Gp$       | $p, XGp$      |
+
+Una formula $\beta$ è vera in posizione $j$ se e solo se almeno una delle due formule $k_1(\beta), k_2(\beta)$ è vera in posizione $j$.
+
+| $\beta$    | $k_1(\beta)$ | $k_2(\beta)$ |
+| ---------- | ---------  | ---------  |
+| $p \lor q$ | $p$     | $q$     |
+| $Fp$       | $p$      | $XFp$      |
+| $p U q$       | $q$      | $p, X(pUq)$  |
+
+
 
 ## Validità nel tableau
 

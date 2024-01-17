@@ -27,7 +27,8 @@ Ad esempio il linguaggio sull'alfabeto $A = \{ a, b, c \}$ definito come "tutte 
 
 Si può rimuovere l'indipendenza da $A$ sostituendo $A$ con $\{0,1\}^{n}, \, n = \log_2 |A|$. Si passa in questo modo da $S1S_{A}$ a $S1S$.
 
-#todo completare, pagina 55
+Ogni simbolo di una parola infinita $\alpha$ viene sostituito con la sua rappresentazione binaria, e si rimpiazzano i predicati $Q_a, Q_b, \dots$ con un insieme di variabili libere di secondo ordine $X_1,\dots,X_n$. 
+Ogni parola $\alpha \in A^\omega$ viene rappresentata come $\underline \alpha = (\omega, 0, +1, <, \{P_k\}_{k=1\dots n})$, con $P_k = \{i \in 0 \dots k : (\alpha(i))_k = 1\}$ per $k = 1 \dots n$.
 
 ## Teorema di Büchi
 
@@ -42,15 +43,15 @@ Gli insiemi $Y_{i}$ rappresentano le posizioni dove la computazione di $\mathcal
 
 La formula $\varphi$ ha 3 congiunti: $\varphi = \varphi_{1} \land \varphi_{2} \land \varphi_{3}$:
 - $\varphi_{1}(Y_{1},\dots,Y_{m}) = 0 \in Y_{0} \land \bigwedge\limits_{i \neq j} \nexists y (y \in Y_{i} \land y \in Y_{j})$. Questa formula rappresenta **inizialità** e **unicità dello stato**.
-- $\varphi_{2}(Y_{1},\dots,Y_{m}) = \forall x \land \bigvee\limits_{(i,a,j)\in\Delta}(x \in Y_{i} \land x \in Q_{a} \land x+1 \in Y_j)$. Questa formula rappresenta la **consequenzialità** della computazione.
+- $\varphi_{2}(Y_{1},\dots,Y_{m}) = \forall x \bigvee\limits_{(i,a,j)\in\Delta}(x \in Y_{i} \land x \in Q_{a} \land x+1 \in Y_j)$. Questa formula rappresenta la **consequenzialità** della computazione.
 - $\varphi_{3}(Y_{1},\dots,Y_{m}) = \bigvee\limits_{i \in F} \forall x \exists y : x < y \land y \in Y_{i}$. Questa formula rappresenta **finalità**.
 
 Questa formula è soddisfacibile se $\mathcal{A}$ riconosce $L$.
 
 ### $\Leftarrow$
-Si sostituisce $S1S$ con una variante ugualmente espressiva: $S1S_{0}$. Le formule di questa variante hanno solo quantificazioni su variabili del secondo ordine. Ogni $\psi \in S1S_0$, $L(\psi)$ è $\omega$-regolare.
+Si sostituisce $S1S$ con una variante ugualmente espressiva: $S1S_{0}$. Le formule di questa variante hanno solo quantificatori su variabili del secondo ordine. Successivamente si mostra che per ogni $\psi \in S1S_0$, $L(\psi)$ è $\omega$-regolare.
 
-Si vuole quindi dimostrare che i due modelli abbiano la stessa espressività. Attraverso delle regole di riscrittura, è possibile rappresentare qualunque formula in $S1S$ con una in $S1S_0$.
+Si vuole quindi dimostrare che i due modelli hanno la stessa espressività. Attraverso delle regole di riscrittura, è possibile rappresentare qualunque formula in $S1S$ con una in $S1S_0$.
 Ottenuta la formula $S1S_0$, questa può essere tradotta in un BA per induzione sulla struttura di $\psi$.
 
 ### Problemi in $S1S$

@@ -18,7 +18,7 @@ Un **BA** $\mathcal{A}$ è una quintupla $(Q,A,\Delta, q_{0}, F)$. La definizion
 
 Una computazione $\delta$ di $\mathcal{A}$ su una $\omega$-parola è una $\omega$-parola su $Q$ tale che:
 1. $\delta(0) = q_0$, il primo simbolo della $\omega$-parola $\delta$ è lo stato $q_0$.
-2. $\forall i \geq 0, \, (\delta(i), \alpha(i)\delta(i+1)) \in \Delta$, lo stato raggiunto dallo stato $\delta(i)$ leggendo il simbolo $\alpha(i)$ è nella relazione di transizione.
+2. $\forall i \geq 0, \, (\delta(i), \alpha(i), \delta(i+1)) \in \Delta$, lo stato raggiunto dallo stato $\delta(i)$ leggendo il simbolo $\alpha(i)$ è nella relazione di transizione.
 
 Una computazione $\delta$ su $\alpha$ ha successo se $In(\alpha) \cap F \neq \varnothing$: alcuni stati finali in $F$ sono raggiunti infinite volte.
 
@@ -56,7 +56,7 @@ Una computazione $\sigma$ su $\alpha$ ha successo se $In(\alpha) \cap F \neq \va
 
 I DBA sono chiusi sotto unione ed intersezione.
 
-Un linguaggio $L \in A^{\omega}$ è riconosciuto da un DBA se e solo se $L = W$ per qualche linguaggio regolare $W \subseteq A^*$. Si dimostrano i due versi dell'implicazione.
+Un linguaggio $L \in A^{\omega}$ è riconosciuto da un DBA se e solo se $L = \overrightarrow{W}$ per qualche linguaggio regolare $W \subseteq A^*$. Si dimostrano i due versi dell'implicazione.
 
 $\Rightarrow$) Sia $\mathcal{A}$ un DBA, $\mathcal{A}'$ il FSA su parole finite corrispondente e $W$ il linguaggio riconosciuto da $\mathcal{A}'$. Si dimostra che $L(\mathcal{A}) = \overrightarrow W$, l'insieme infinito di prefissi.
 Dalla definizione di condizione di accettazione dei BA e dalla loro natura deterministica, $\mathcal{A}$ accetta una $\omega$-parola $\alpha$ se e solo se la computazione di $\mathcal{A}$ su $\alpha$ ha successo: ad infinite posizioni si trovano infiniti stati finali. 

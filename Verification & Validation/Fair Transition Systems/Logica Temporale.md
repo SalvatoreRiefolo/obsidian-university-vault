@@ -2,6 +2,7 @@ Ci si vuole assicurare che certe proprietà siano sempre (necessariamente)/a vol
 
 Si parla di **Linear Temporal Logic (LTL)** quando non si hanno ramificazioni nel futuro. La variante **Propositional LTL (PLTL)** aggiunge la logica proposizionale ai connettivi temporali.
 
+LTL è una logica modale con modalità temporali, frammento di [[Computation Tree Logic|CTL]].
 
 ## Sintassi
 - $X$: "**next**", connettivo unario. L'argomento è $true$ al prossimo istante temporale.
@@ -29,7 +30,7 @@ Una **Linear Temporal Structure** è definita da una tripla $M=(S,x,L)$, dove:
 
 - $S$ è l'insieme di stati.
 - $x: \mathbb{N} \rightarrow S$ sequenza di stati.
-- $L: S \rightarrow AP^{Q}$ una funzione di labeling.
+- $L: S \rightarrow AP^{Q}$ una funzione di labeling. Definisce le proposizioni atomiche valide nello stato $S$.
 
 La **verità** di una formula nella è struttura è definita come $M, x \models p$: in posizione $x$ della struttura $M$, $p=true$.
 
