@@ -1,10 +1,10 @@
 Dati:
-- Una **configurazione del sistema** (modello o struttura $S$). Questa è rappresentabile tramite un automata, cioè una sequenza infinita di azioni su un $\Omega$-linguaggio (insieme infinito di parole).
-- Una specifica (formula $\varphi$). Ad esempio "$x$ or $y$ until $a$".
+- Una **configurazione del sistema** (modello, interpretazione o struttura $S$). Questa è rappresentabile tramite un automa, cioè una sequenza infinita di azioni su un $\Omega$-linguaggio (insieme infinito di parole).
+- Una **specifica** (formula $\varphi$). Ad esempio "$x$ or $y$ until $a$".
 
 Si vuole controllare che il modello **soddisfi** la specifica: si vuole dare risposta $yes/no$ in base a se $\varphi$ regge su $S$: $S \models \varphi$.
 
-Una prima soluzione è compilare la negazione della specifica $\lnot \varphi$, tradurre la formula in automata e controllare che l'intersezione con l'automata del modello è vuota: se non lo è, allora esiste una computazione non valida.
+Una prima soluzione è compilare la negazione della specifica $\lnot \varphi$, tradurre la formula in automa e controllare che l'intersezione con l'automa del modello è vuota: se non lo è, allora esiste una computazione non valida.
 
 ## Logica
 
@@ -77,6 +77,6 @@ La logica QBF è composta da
 
 ### Algoritmi
 
-$ModelChecking(\varphi, S)$ è un problema $PSPACE$-completo. Rispetto alla complessità delle logiche precedenti, bisogna controllare che se la sotto-formula considerata è una relazione bisogna controllare che le variabili la soddisfino, e che per le variabili di primo ordine quantificate esista un assegnamento nell'universo che soddisfi la formula.
+$ModelChecking(\varphi, S)$ è un problema $PSPACE$-completo. Rispetto alla complessità delle logiche precedenti, se la sotto-formula considerata è una relazione bisogna controllare che le variabili la soddisfino, e che per le variabili di primo ordine quantificate esista un assegnamento nell'universo che soddisfi la formula.
 
 $Satisfiability(\varphi)$ è indecidibile, ed è possibile dimostrarlo riducendo il problema da $Domino$.

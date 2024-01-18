@@ -30,7 +30,7 @@ La transizione mette in relazione uno stato $s$ ed i suoi $\tau$-successori $s' 
 
 >[!Esempio]
 >Si rappresentano come $x,y,z,\dots$ i valori di variabili in $s$ e $x',y',z',\dots$ i loro valori in $s'$.
->La formula $x' = x + 1$ dice che il valore di $x$ allo stato $s'$ ($s'[x]$) è uguale al valore di $x$ più uno ($S[x]$ + 1).
+>La formula $x' = x + 1$ dice che il valore di $x$ allo stato $s'$ ($s'[x]$) è uguale al valore di $x$ più uno ($s[x]$ + 1).
 
 La **condizione di abilitazione** di una transizione $\tau$ è definita come $En(\tau): \exists V' \, \varphi_{\tau}(V,V')$. L'immagine di $\tau$ quindi non è mai l'insieme vuoto.
 

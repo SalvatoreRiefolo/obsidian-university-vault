@@ -2,9 +2,9 @@ Le espressioni regolari sono un modo per definire i **linguaggi regolari**, una 
 
 ## Espressioni regolari ristrette
 
-Sono costruite a partire da un insieme finito di parole su un alfabeto $A$, che assumiamo essere $A$ stesso. Ad esempio, se $A=\{a,b,c\}$ l'insieme di parole è $\{a,b,c\}$.
+Sono costruite a partire da insiemi finiti di parole su un alfabeto $A$, che assumiamo essere $A$ stesso. Ad esempio, se $A=\{a,b,c\}$ l'insieme di parole è $\{a,b,c\}$.
 
-Si costruiscono applicando sull'insieme le operazioni di unione, concatenazione e stella di Kleene (*).
+Si costruiscono applicando sugli insiemi le operazioni di unione, concatenazione e stella di Kleene (*).
 
 Esempi:
 - $r \cup s$ è l'unione delle espressioni regolari $r,s$, cioè l'unione degli insiemi di stringhe da esse identificate.
