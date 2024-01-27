@@ -73,6 +73,6 @@ Se $L \subseteq A^{\omega}$ è un linguaggio $\omega$-regolare allora $\overline
 
 Dato un BA $\mathcal{A}$ ed una [[Relazioni#Relazione $ approx_{ mathcal{A}}$|congruenza di indice finito]] $\approx_{\mathcal{A}}$ possiamo derivare dai due lemmi sulla relazione che  $\overline L = \bigcup U \cdot V^{\omega}$ per $U,V$ $\approx_{\mathcal{A}}$-classi  tali che $U \cdot V^{\omega} \cap \overline L \neq \varnothing$. Essendo $U,V$ linguaggi regolari ed i $\omega$-linguaggi chiusi sotto concatenazione e unione, un BA che riconosce questi linguaggi riconosce anche $\overline L$.
 
-Una conseguenza della chiusura sotto complementazione è che due gli $\omega$-linguaggi sono univocamente identificati dalle lor $\omega$-parole $UP$.
+Una conseguenza della chiusura sotto complementazione è che gli $\omega$-linguaggi sono univocamente identificati dalle loro $\omega$-parole $UP$.
 
 #todo dimostrazione

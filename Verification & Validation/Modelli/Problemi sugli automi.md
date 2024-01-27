@@ -14,7 +14,7 @@ Dati $\mathcal{A}, \mathcal{A'}$ due automi a stati finiti abbiamo:
 
 Dati $\mathcal{A}, \mathcal{A'}$ due automi automi di Büchi abbiamo:
 
-1. **Emptiness problem**: $L(\mathcal{A}) = \varnothing$. Sfruttando le [[Espressioni regolari#$ omega$-parole ultimately periodic|parole UP]] possiamo decidere se un linguaggio $\omega$-regolare è vuoto controllando l'esistenza di parole $UP$. Per fare ciò si cerca all'interno del grafo dell'esecuzione di $\mathcal{A}$ si raggiunge un ciclo: in caso affermativo, una parola $UP$ è stata trovata. Tuttavia non è semplice trasformare una formula in un BA per controllare efficientemente se questa ammette soluzioni. Gli altri problemi sono riducibili all'emptiness problem come per i FSA.
+1. **Emptiness problem**: $L(\mathcal{A}) = \varnothing$. Sfruttando le [[Espressioni regolari#$ omega$-parole ultimately periodic|parole UP]] possiamo decidere se un linguaggio $\omega$-regolare è vuoto controllando l'esistenza di parole $UP$. Per fare ciò si cerca se all'interno del grafo dell'esecuzione di $\mathcal{A}$ si raggiunge un ciclo: in caso affermativo, una parola $UP$ è stata trovata. Tuttavia non è semplice trasformare una formula in un BA per controllare efficientemente se questa ammette soluzioni. Gli altri problemi sono riducibili all'emptiness problem come per i FSA.
 2. **Universality problem**: $L(\mathcal{A}) = A^{\omega}$
 3. **Inclusion problem**: $L(\mathcal{A}) \subseteq L(\mathcal{A'})$
 4. **Equivalence problem**: $L(\mathcal{A}) = L(\mathcal{A'})$

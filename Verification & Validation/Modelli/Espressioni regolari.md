@@ -33,7 +33,12 @@ Dato $\mathcal{A} = (\{q_1,\dots,q_n\},A,\delta,q_1,F)$ un automa a stati finiti
 Applicando la funzione di transizione sulla parola $x$ in stato $q_i$ raggiungiamo $q_j$, ed applicando la funzione di transizione sulla parola $y$ con lo stesso stato raggiungiamo lo stato $q_l$ con indice $\leq k$.
 
 ### RRE $\Rightarrow$ NDA con $\varepsilon$-mosse
-#todo 
+
+Si possono costruire NDA con $\varepsilon$-mosse per induzione sulla struttura di una RRE.
+- Una RE $r$ può essere rappresentata come un unico stato sia iniziale che finale ($r = \{\varepsilon\}$), uno stato iniziale senza transizioni uscenti ($r = \{\varnothing\}$) o uno stato iniziale che porta ad uno finale ($r = \{a\}$).
+- Si può rappresentare l'unione di due RE $r_{1} \cup r_{2}$ con un FA $\mathcal{A} = (\{Q_{1}\ \cup Q_{2} \cup \{q_{0}, f_{0}\}\}, A, \delta_q, q_{0}, \{f_{0}\})$. Si parte dall'unico stato iniziale e attraverso una $\varepsilon$-mossa si raggiungono entrambi i sotto-automi per $r_{1}, r_{2}$. Si accetta una parola se si raggiunge l'unico stato finale $f_{0}$.
+- Si può rappresentare la concatenazione di due RE $r_{1} \cdot r_{2}$ con un FA $\mathcal{A} = (\{Q_{1}\ \cup Q_{2}\}, A, \delta_q, q_{0}, \{f_{2}\})$. Si parte dallo stato iniziale per $r_{1}$ e attraverso una $\varepsilon$-mossa raggiunge lo stato iniziale di $r_{2}$ se $r_{1}$ viene accettata: si concatenano i due automi.
+- Si può rappresentare la stella di Kleene $(r_1)*$ aggiungendo una $\varepsilon$-mossa dallo stato finale allo stato iniziale. Se la computazione termina nello stato finale del FA per $r_1$, con un'altra $\varepsilon$-mossa si raggiunge il vero stato finale dell'NDA.
 
 
 ## Espressioni $\omega$-regolari
