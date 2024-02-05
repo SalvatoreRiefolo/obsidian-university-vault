@@ -56,7 +56,7 @@ Si dimostra per contraddizione, affermando che $\sim$ satura $L$ ma non $\overli
 Da questa affermazione segue che esiste una $\omega$-parola non in $\overline L$ che deve quindi essere in $L$, ma dato che $\sim$ satura $L$ allora $U \cdot V^{\omega} \subseteq L$, raggiungendo così una contraddizione.
 
 ## Relazione $\approx_{\mathcal{A}}$
-Sia $\mathcal{A}$ un BA. La relazione $u,v$ appartengono alla relazione $u \approx_{\mathcal{A}} v$ su $A^*$ se Se $\forall s,s' \in Q$:
+Sia $\mathcal{A}$ un BA. Le parole $u,v$ appartengono alla relazione $u \approx_{\mathcal{A}} v$ su $A^*$ se $\forall s,s' \in Q$:
 
 - $s \rightarrow_{v} s' \leftrightarrow s \rightarrow_{u} s'$
 - $s \rightarrow_{v}^{F} s' \leftrightarrow s \rightarrow_{u}^{F} s'$

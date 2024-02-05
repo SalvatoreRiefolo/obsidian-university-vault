@@ -11,7 +11,7 @@ Il linguaggio $S1S$ su un alfabeto $A$, chiamato $S1S_{A}$, è definito da:
 
 Ad esempio, la variabile di secondo ordine quantificata $\forall X$ indica che il predicato che segue deve soddisfare ogni insieme di variabili.
 
-### Interpretazione modello-teorico di $\omega$-parole in $S1S$
+### Interpretazione model-theoretic di $\omega$-parole in $S1S$
 Si attribuisce un significato a valori di verità di espressioni e formule di $S1S$.
 
 Per ogni parola $\alpha \in A^{\omega}$ definiamo $\underline \alpha = (\omega, 0, +1, <, \{Q_a\}_{\alpha})$, dove:

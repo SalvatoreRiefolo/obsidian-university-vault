@@ -12,7 +12,7 @@ Uno stato è un'interpretazione che assegna ad ogni variabile $u \in V$ un valor
 Un FTS è una quintupla $\langle V, \theta, \mathcal{T}, \mathcal{J}, \mathcal{C}\rangle$, dove:
 - $V = \{u_1,\dots,u_n\}$ variabili di sistema. Sono partizionate in variabili $data$ e $control$, che controllano lo stato dell'esecuzione (cursori).
 - $\theta$ è una formula di stato soddisfacibile che descrive l'insieme di stati iniziali, **la condizione iniziale**. Uno stato che soddisfa $\theta$ è uno stato iniziale.
-- $\mathcal{T}$ è un insieme finito di transizioni, che rappresentano gli archi nel grafo del FTS. Ogni transizione $\tau \in \mathcal{T}$ è una funzione $\tau : \Sigma \rightarrow 2^\Sigma$, che mappa ogni stato un un insieme di stati $\tau(s) \subseteq \Sigma$. Ogni stato in $\tau(s)$ è un $\tau$-successore di $s$, e $\tau$ è **abilitata** se $\tau(s) \neq \varnothing$, cioè se la transizione applicata ad uno stato ha successori. Altrimenti, è **disabilitata**.
+- $\mathcal{T}$ è un insieme finito di transizioni, che rappresentano gli archi nel grafo del FTS. Ogni transizione $\tau \in \mathcal{T}$ è una funzione $\tau : \Sigma \rightarrow 2^\Sigma$, che mappa ogni stato in un insieme di stati $\tau(s) \subseteq \Sigma$. Ogni stato in $\tau(s)$ è un $\tau$-successore di $s$, e $\tau$ è **abilitata** se $\tau(s) \neq \varnothing$, cioè se la transizione applicata ad uno stato ha successori. Altrimenti, è **disabilitata**.
 
 Una tripla $\langle V, \theta, \mathcal{T}\rangle$ rappresenta un sistema di transizioni **classico**. Aggiungendo le condizioni di *justice* e *fairness* si ottiene un sistema *fair*.
 

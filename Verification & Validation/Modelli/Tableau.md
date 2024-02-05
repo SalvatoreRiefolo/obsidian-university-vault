@@ -5,7 +5,7 @@ Se un atomo presenta un connettivo temporale *Next* su una proposizione o formul
 ### Regole di espansione
 Si adottano delle regole di espansione dei connettivi temporali:
 
-- $Gp \approx P \land XGp$
+- $Gp \approx p \land XGp$
 - $Fp \approx p \lor XFp$
 - $pUq \approx q \lor (p \land X(pUq))$
 
@@ -62,7 +62,7 @@ Dato un modello $\sigma$ di $\varphi$, il percorso infinito $\pi_{\sigma}: A_0,A
 Dati $\varphi$ e $T_\varphi$, per ogni $\sigma$ di $\varphi$ esiste un percorso indotto.
 
 ### Promessa 
-La formula $\psi$ promette la formula $r$ se $\psi$ ha una delle possibili forme:
+La formula $\psi$ **promette** la formula $r$ se $\psi$ ha una delle possibili forme:
 - $Fr$
 - $pUr$
 - $\lnot G \lnot r$

@@ -9,7 +9,7 @@ Dati due indici $n,m$, $a(n,m) = \alpha(n)\alpha(n+1),\dots,\alpha(m-1)$ è la *
 Si definisce $\exists^{\omega}_n$ come "esistono infinitamente tante posizioni $n$" e $\exists^{< \omega}_n$ con "esistono un numero finito di $n$".
 
 Dato un insieme $W \subseteq A^*$ (insieme infinito di parole finite) si definiscono i seguenti insiemi di parole infinite:
-- $W^{\omega} = \{\alpha \in A^{\omega}: \alpha = w_{0}w_{1}\dots w_{i} \in W, \, \forall i \geq 0\}$, chiamato **$\omega$-chiusura** di $W$.
+- $W^{\omega} = \{\alpha \in A^{\omega}: \alpha = w_{0}w_{1}\dots, w_{i} \in W, \, \forall i \geq 0\}$, chiamato **$\omega$-chiusura** di $W$.
 - $\overrightarrow{W} = \{\alpha \in A^{\omega}: \exists^{\omega}_n \alpha(0, n) \in W\}$, chiamato **chiusura vettoriale** di $W$. È l'insieme infinito di parole con prefissi appartenenti a $W$.
 
 $W^{\omega}, \overrightarrow{W}$ possono coincidere (ad esempio quando $W$ ha forma $(ab)^*$) o essere diversi (ad esempio quando $W$ ha forma $(a^*b) \cup (cd^*)$)
@@ -42,7 +42,9 @@ I DBA sono chiusi sotto unione ed intersezione.
 ### Lemmi
 Un linguaggio $L \in A^{\omega}$ è riconosciuto da un DBA se e solo se $L = \overrightarrow{W}$ per qualche linguaggio regolare $W \subseteq A^*$. Si dimostrano i due versi dell'implicazione.
 
-$\Rightarrow$) Sia $\mathcal{A}$ un DBA, $\mathcal{A}'$ il FSA su parole finite corrispondente e $W$ il linguaggio riconosciuto da $\mathcal{A}'$. Si dimostra che $L(\mathcal{A}) = \overrightarrow W$, l'insieme infinito di prefissi.
+Sia $\mathcal{A}$ un DBA, $\mathcal{A}'$ il FSA su parole finite corrispondente e $W$ il linguaggio riconosciuto da $\mathcal{A}'$: i due automi hanno la stessa struttura, cambia solo la condizione di accettazione. 
+
+$\Rightarrow$) Si dimostra che $L(\mathcal{A}) = \overrightarrow W$, l'insieme infinito di prefissi.
 Dalla definizione di condizione di accettazione dei BA e dalla loro natura deterministica, $\mathcal{A}$ accetta una $\omega$-parola $\alpha$ se e solo se la computazione di $\mathcal{A}$ su $\alpha$ ha successo: ad infinite posizioni si trovano infiniti stati finali. 
 Si possono trovare infiniti prefissi $\in W$ nell'esecuzione di $\mathcal{A}'$, validando la condizione di accettazione.
 

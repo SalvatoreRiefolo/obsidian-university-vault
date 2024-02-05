@@ -1,4 +1,4 @@
-Rispetto ad [[Logica Temporale|LTL]], gli stati possono avere più successori: il tempo si ramifica, cioè è possibile avere più modelli lineare allo stesso momento.
+Rispetto ad [[Linear Temporal Logic|LTL]], gli stati possono avere più successori: il tempo si ramifica, cioè è possibile avere più modelli lineare allo stesso momento.
 
 Un CTL è una tripla $M = (S, R, L)$, la cui struttura è simile a quella di LTL.
 - $S$ è l'insieme di stati.
@@ -28,7 +28,7 @@ LTL e CTL sono incomparabili in termini di espressività. LTL è un **frammento*
 Ci sono formule LTL che non possono essere convertite in CTL (es., $FGp$ ha due quantificatori di stato in successione) e formule CTL che non possono essere convertite in LTL ($EFQ$ ha senso solo se esistono percorsi infiniti).
 
 Il model checking decide se $M, s \models \varphi$.
-Si elaborano le sotto-formule e si valutano indipendentemente in maniera ricorsiva le formule del tipo $EU, AU$.
+Si espandono le sotto-formule e si valutano indipendentemente in maniera ricorsiva le formule del tipo $EU, AU$.
 
 ### Complessità
 Siano:
