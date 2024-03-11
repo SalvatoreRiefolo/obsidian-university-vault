@@ -19,7 +19,6 @@ $$\forall x,y \in A^{*}, x \sim_L y \rightarrow \forall z \in A^{*}, xz \in L \l
 $x,z$ sono in relazione rispetto ad un linguaggio $L$ se concatenando una stringa $z$ ad $x,y$ entrambe le stringhe risultanti appartengono (o non appartengono) ad $L$ .
 
 Questa relazione è di equivalenza ed è right invariant.
-#todo
 
 ---
 
@@ -31,7 +30,6 @@ $$\forall x,y \in A^{*}, x \sim_{\mathcal{A}} y \leftrightarrow \delta(q_{0},x) 
 $x,y$ sono in relazione rispetto ad un DFA $\mathcal{A}$ se lo stato raggiunto dallo stato di input $q_0$ su entrambe le stringhe è lo stesso.
 
 Questa relazione è di equivalenza ed è right invariant.
-#todo
 
 La cardinalità di questa relazione è limitata dal numero di stati $|Q|$ di $\mathcal{A}$: due stringhe sono in relazione se si raggiunge lo stesso stato da quello iniziale, ed abbiamo un numero finito di stati $|Q|$. La relazione ha quindi **indice finito**.
 

@@ -25,7 +25,7 @@ Ad esempio il linguaggio sull'alfabeto $A = \{ a, b, c \}$ definito come "tutte 
 
 ---
 
-Si può rimuovere l'indipendenza da $A$ sostituendo $A$ con $\{0,1\}^{n}, \, n = \log_2 |A|$. Si passa in questo modo da $S1S_{A}$ a $S1S$.
+Si può rimuovere la dipendenza da $A$ sostituendo $A$ con $\{0,1\}^{n}, \, n = \log_2 |A|$. Si passa in questo modo da $S1S_{A}$ a $S1S$.
 
 Ogni simbolo di una parola infinita $\alpha$ viene sostituito con la sua rappresentazione binaria, e si rimpiazzano i predicati $Q_a, Q_b, \dots$ con un insieme di variabili libere di secondo ordine $X_1,\dots,X_n$. 
 Ogni parola $\alpha \in A^\omega$ viene rappresentata come $\underline \alpha = (\omega, 0, +1, <, \{P_k\}_{k=1\dots n})$, con $P_k = \{i \in 0 \dots k : (\alpha(i))_k = 1\}$ per $k = 1 \dots n$.
@@ -60,7 +60,7 @@ Come conseguenza del teorema di Büchi, la teoria di $S1S$ è **decidibile** in 
 
 L'emptiness problem è decidibile in tempo polinomiale: si converte da una formula $S1S$ ad un BU e si effettua il controllo.
 
-Il problema di controllare l'apparteneza di una formula alla teoria di $S1S$ è **non-elementary**: non è stato trovato un limite alla torre di esponenziazione che rappresenta la complessità del problema.
+Il problema di controllare l'appartenenza di una formula alla teoria di $S1S$ è **non-elementary**: non è stato trovato un limite alla torre di esponenziazione che rappresenta la complessità del problema.
 
 ## Weak S1S 
 

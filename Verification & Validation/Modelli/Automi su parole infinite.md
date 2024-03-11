@@ -20,11 +20,11 @@ Si definiscono con $In(\alpha) = \{a \in A: \exists^{\omega}_{n}\alpha(n) = a\}$
 
 Un **BA** $\mathcal{A}$ è una quintupla $(Q,A,\Delta, q_{0}, F)$. La definizione è la stessa del [[Automi a stati finiti#Automi a stati finiti non deterministici (NFA)|NFA]] ($\Delta$ è una relazione di transizione non deterministica).
 
-Una computazione $\delta$ di $\mathcal{A}$ su una $\omega$-parola è una $\omega$-parola su $Q$ tale che:
-1. $\delta(0) = q_0$, il primo simbolo della $\omega$-parola $\delta$ è lo stato $q_0$.
-2. $\forall i \geq 0, \, (\delta(i), \alpha(i), \delta(i+1)) \in \Delta$, lo stato raggiunto dallo stato $\delta(i)$ leggendo il simbolo $\alpha(i)$ è nella relazione di transizione.
+Una computazione $\sigma$ di $\mathcal{A}$ su una $\omega$-parola è una $\omega$-parola su $Q$ tale che:
+1. $\sigma(0) = q_0$, il primo simbolo della $\omega$-parola $\delta$ è lo stato $q_0$.
+2. $\forall i \geq 0, \, (\sigma(i), \alpha(i), \sigma(i+1)) \in \Delta$, lo stato raggiunto dallo stato $\sigma(i)$ leggendo il simbolo $\alpha(i)$ è nella relazione di transizione.
 
-Una computazione $\delta$ su $\alpha$ ha successo se $In(\alpha) \cap F \neq \varnothing$: alcuni stati finali in $F$ sono raggiunti infinite volte.
+Una computazione $\sigma$ su $\alpha$ ha successo se $In(\sigma) \cap F \neq \varnothing$: alcuni stati finali in $F$ sono raggiunti infinite volte.
 
 $\mathcal{A}$ **accetta** una $\omega$-parola $\alpha$ se e solo se esiste una computazione di successo di $\mathcal{A}$ su $\alpha$. Il **linguaggio** $L(\mathcal{A})$ è l'insieme di tutte le $\omega$-parole accettate da $\mathcal{A}$.
 
@@ -34,7 +34,7 @@ Un linguaggio $L \subseteq A^{\omega}$ è **$\omega$-regolare** se esiste un BA 
 
 Un **DBA** $\mathcal{A}$ è una quintupla $(Q,A,\delta, q_{0}, F)$. La definizione è la stessa dell'automa di Büchi non deterministico, ma $\delta$ è una funzione di transizione deterministica $Q \times A \rightarrow Q$
 
-Una computazione $\sigma$ su $\alpha$ ha successo se $In(\alpha) \cap F \neq \varnothing$: alcuni stati finali in $F$ sono raggiunti infinite volte.
+Una computazione $\sigma$ su $\alpha$ ha successo se $In(\sigma) \cap F \neq \varnothing$: alcuni stati finali in $F$ sono raggiunti infinite volte.
 
 ### Proprietà di chiusura
 I DBA sono chiusi sotto unione ed intersezione.
@@ -78,7 +78,7 @@ NBA e NMA hanno lo stesso potere espressivo, ed è possibile ottenere l'uno dall
 I DMA sono chiusi sotto unione, intersezione e complementazione.
 
 ### Lemmi
-1. Un $\omega$-linguaggio $L \subseteq A^{\omega}$ è riconosciuto da un DMA se e solo se $L$ una **combinazione booleana** su $A^{\omega}$ di linguaggio della forma $\overrightarrow W$, dove $W$ è un insieme regolare.
+1. Un $\omega$-linguaggio $L \subseteq A^{\omega}$ è riconosciuto da un DMA se e solo se $L$ una **combinazione booleana** su $A^{\omega}$ di linguaggi della forma $\overrightarrow W$, dove $W$ è un insieme regolare.
 
 2. Ogni $\omega$-linguaggio $L \subseteq A^{\omega}$ riconosciuto da un NBA può essere espresso come l'unione finita di linguaggio della forma $\overrightarrow U \cap \overline{\overrightarrow V}$ con $U,V$ linguaggio regolari.
 

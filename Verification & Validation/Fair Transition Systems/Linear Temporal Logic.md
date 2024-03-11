@@ -10,7 +10,7 @@ LTL è una logica modale con modalità temporali, frammento di [[Computation Tre
 - $F$: "**future**", connettivo unario. L'argomento è $true$ prima o poi nel futuro.
 - $G$: "**global**", connettivo unario. L'argomento è $true$ sempre nel futuro.
 - $F^{\infty}$: connettivo unario. L'argomento è $true$ infinite volte nel futuro.
-- $B$: "**before**", connettivo binario. $p B q$ indica che $p=true$ in uno o più istanti precedenti a $q=true$.
+- $B$: "**release**", connettivo binario. $p B q$ indica che $p=true$ in uno o più istanti precedenti a $q=true$.
 
 $F,G$ sono **inter-definibili**: $Fp = \lnot G \lnot p$, $Gp = \lnot F \lnot p$.
 
@@ -20,7 +20,7 @@ $F,G$ sono **inter-definibili**: $Fp = \lnot G \lnot p$, $Gp = \lnot F \lnot p$.
 
 Si definiscono con $En$ l'abilitazione di una transizione e $Tk$ la sua esecuzione. 
 
-- **Giustizia**: viene definita come $G(GEn \rightarrow FTk)$: ovunque nel futuro, se una transizione è sempre abilitata prima o poi verrà eseguita.
+- **Giustizia**: viene definita come $G(GEn \rightarrow FTk)$: ovunque nella computazione, se una transizione è sempre abilitata prima o poi verrà eseguita.
 - **Compassione**: viene definita come $GFEn \rightarrow GFTk$: se una transizione è abilitata infinite volte nel futuro, allora è eseguita infinite volte nel futuro.
 
 
@@ -32,7 +32,7 @@ Una **Linear Temporal Structure** è definita da una tripla $M=(S,x,L)$, dove:
 - $x: \mathbb{N} \rightarrow S$ sequenza di stati.
 - $L: S \rightarrow AP^{Q}$ una funzione di labeling. Definisce le proposizioni atomiche valide nello stato $S$.
 
-La **verità** di una formula nella è struttura è definita come $M, x \models p$: in posizione $x$ della struttura $M$, $p=true$.
+La **verità** di una formula nella struttura è definita come $M, x \models p$: in posizione $x$ della struttura $M$, $p=true$.
 
 Per verificare la veridicità di una formula LTL si utilizzano i [[Tableau|tableau]].
 
